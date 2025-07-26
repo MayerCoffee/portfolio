@@ -1,0 +1,450 @@
+/* Background Container */
+.container {
+    width: 100%;
+    height: 100%;
+    /* Add your background pattern here */
+    background-color: #ffffff;
+    background-image: radial-gradient(
+        rgba(12, 12, 12, 0.171) 2px,
+        transparent 0
+    );
+    background-size: 30px 30px;
+    background-position: -5px -5px;
+}
+
+.container-main {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    .container-main {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
+
+body {
+    font-family: "Inter", "Roboto", sans-serif;
+    background: #fff;
+    color: #bcbcbc;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    height: 60px;
+    margin: 32px;
+}
+
+header {
+    display: flex;
+    align-items: center; /* centre verticalement */
+    justify-content: space-between;
+    height: 124px; /* adapte si besoin */
+    padding: 0 32px; /* optionnel, marges sur les côtés */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.grid-etapes {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 90px 20px; /* <--- ICI ! (vertical horizontal) */
+    background: #fff;
+}
+
+.header-left,
+.header-center,
+.header-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.header-left {
+    justify-content: flex-start;
+}
+
+.header-center {
+    justify-content: center;
+}
+
+.header-right {
+    justify-content: flex-end; /* Vide, mais permet d'équilibrer l'espace */
+}
+
+.btn-contact,
+.btn,
+.btn-contact-big {
+    border: 1.5px solid #b99cff;
+    background: transparent;
+    border-radius: 30px;
+    padding: 14px 32px;
+    font-family: inherit;
+    font-size: 0, 9%;
+    color: #222;
+    cursor: pointer;
+    margin: 50 px;
+    transition: border-color 0.2s;
+}
+
+/* From Uiverse.io by gharsh11032000 */
+.button {
+    position: relative;
+    width: 60px;
+    height: 52px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: -4px;
+    top: -1px;
+    margin: auto;
+    width: 70px;
+    height: 52px;
+    border-radius: 999px;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+}
+
+.button:hover::after {
+    filter: blur(30px);
+}
+
+.button:hover::before {
+    transform: rotate(-180deg);
+}
+
+.button:active::before {
+    scale: 0.7;
+}
+button,
+.button {
+    .button {
+        position: relative;
+        width: 60px;
+        height: 52px;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        color: white;
+        flex-direction: column;
+        justify-content: center;
+        border: none;
+        padding: 12px;
+        gap: 12px;
+        border-radius: 999px;
+        cursor: pointer;
+    }
+
+    .button::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        left: -4px;
+        top: -1px;
+        margin: auto;
+        width: 70px;
+        height: 52px;
+        border-radius: 999px;
+        background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+        z-index: -10;
+        pointer-events: none;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .button::after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+        transform: translate3d(0, 0, 0) scale(0.95);
+        filter: blur(20px);
+    }
+
+    .button:hover::after {
+        filter: blur(30px);
+    }
+
+    .button:hover::before {
+        transform: rotate(-180deg);
+    }
+
+    .button:active::before {
+        scale: 0.7;
+    }
+    /* même styles que dans .button */
+}
+
+.btn-contact-big {
+    font-size: 1.4rem;
+    margin-left: calc(50% - 150px);
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero h1 {
+    font-size: 4vw;
+    text-align: left;
+    font-weight: 900;
+    color: #dbdbdb;
+    letter-spacing: 2px;
+    margin: px 0 4% 0;
+    padding-left: 0;
+    max-width: 100%;
+    margin-bottom: 16px;
+}
+.choix {
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    padding-left: 0%;
+}
+
+.etapes {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.grid-etapes {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 20px; /* <--- ICI ! (vertical horizontal) */
+    background: #fff;
+}
+
+.projets {
+    margin: 80px 0;
+}
+
+.projet {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.projet:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+footer {
+    text-align: center;
+    margin: 80px 0 32px 0;
+    font-size: 2.2rem;
+}
+
+.etapes h2 {
+    color: #bcbcbc;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 36px;
+    text-align: left;
+    margin-left: 0;
+    padding-left: 32px;
+    box-sizing: border-box;
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+
+    grid-template-rows: repeat(2, 1fr);
+
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .etapes h2 {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+}
+
+.grid-etapes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 20px;
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+.etape {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background: transparent;
+    padding: 0 12px;
+}
+
+.etape-icon {
+    border: 1.5px solid #b99cff;
+    border-radius: 16px;
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.etape-icon img {
+    max-width: 44px;
+    max-height: 44px;
+    filter: grayscale(100%) brightness(0.8);
+}
+
+.etape h3 {
+    color: #bcbcbc;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 10px 0 8px 0;
+    text-align: left;
+}
+
+.etape p {
+    color: #bcbcbc;
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin: 0;
+    opacity: 0.8;
+    text-align: left;
+}
+
+.projets-tableau table {
+    width: 100%;
+    border-collapse: separate; /* Espace entre les lignes */
+}
+
+.projet-text {
+    width: 70%;
+    padding: 44px 36px 28px 54px;
+    vertical-align: top;
+    border-top: #cccccc solid 1px;
+}
+.projet-text h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.17rem;
+    color: #232323;
+    font-weight: 700;
+    margin-bottom: 8px;
+    margin-top: 0;
+    letter-spacing: 0.03em;
+}
+.projet-text h3 span {
+    font-size: 0.96rem;
+    font-weight: 400;
+    color: #bbb;
+    margin-left: 10px;
+}
+.projet-text p {
+    font-size: 0.99rem;
+    color: #9e9e9e;
+    font-weight: 400;
+    margin: 0 0 300px 0;
+    max-width: 95%;
+}
+.arrow {
+    width: 38px;
+    margin-top: 280px;
+    filter: grayscale(100%) brightness(0.7);
+    display: block;
+    .projet-image {
+        background: #fff;
+        width: 30%;
+        height: 350px; /* ou essaye 100%, ou 50vh selon le besoin */
+        text-align: right;
+        vertical-align: middle;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .projets-tableau .projet {
+        display: flex;
+        align-items: stretch;
+        margin-bottom: 40px;
+        gap: 24px;
+    }
+    .projet-text {
+        flex: 1 1 0;
+    }
+    .projet-image {
+        flex: 1 1 0;
+        height: 350px;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+    }
+    .projet-image img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+    @media (max-width: 850px) {
+        .projets-tableau .projet {
+            flex-direction: column;
+            gap: 0;
+        }
+        .projet-text,
+        .projet-image {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .projet-image {
+            height: 190px;
+            margin-bottom: 16px;
+        }
+        .projet-image img {
+            max-width: 95vw;
+            max-height: 190px;
+            width: auto;
+            height: 100%;
+            margin: 0 auto;
+            border-radius: 14px;
+        }
+        
+    }
+}

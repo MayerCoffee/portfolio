@@ -231,7 +231,7 @@ header {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 60px 20px; /* <--- ICI ! (vertical horizontal) */
+    gap: 60px 20px; 
     background: #fff;
 }
 
@@ -344,7 +344,7 @@ footer {
 }
 .projets-tableau table {
     width: 100%;
-    border-collapse: separate; /* Espace entre les lignes */
+    border-collapse: separate; 
 }
 
 .projet-text {
@@ -395,8 +395,8 @@ footer {
     display: flex;
     align-items: stretch;
     justify-content: center;
-    overflow: hidden; /* nécessaire pour contenir le zoom */
-    position: relative; /* nécessaire pour que l'image soit "contenue" */
+    overflow: hidden; 
+    position: relative; 
     border-radius: 0px;
 }
 
@@ -408,7 +408,7 @@ footer {
 }
 
 .projet-image:hover img {
-    transform: scale(1.1); /* zoom fluide */
+    transform: scale(1.1); 
 }
 
 @media (max-width: 850px) {

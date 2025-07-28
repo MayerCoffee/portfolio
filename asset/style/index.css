@@ -231,7 +231,7 @@ header {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 60px 20px; 
+    gap: 60px 20px;
     background: #fff;
 }
 
@@ -344,7 +344,7 @@ footer {
 }
 .projets-tableau table {
     width: 100%;
-    border-collapse: separate; 
+    border-collapse: separate;
 }
 
 .projet-text {
@@ -395,8 +395,8 @@ footer {
     display: flex;
     align-items: stretch;
     justify-content: center;
-    overflow: hidden; 
-    position: relative; 
+    overflow: hidden;
+    position: relative;
     border-radius: 0px;
 }
 
@@ -408,7 +408,7 @@ footer {
 }
 
 .projet-image:hover img {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 @media (max-width: 850px) {
@@ -442,4 +442,115 @@ footer {
     .projet-image:hover img {
         transform: scale(1.1);
     }
+}
+/* Style pour le contact*/
+
+/* style form contact */
+
+/* From Uiverse.io by gharsh11032000 */
+.form-container {
+    width: 900px;
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(145deg, #b99cff, #b99cff) border-box;
+    border: 1px solid transparent;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    padding-bottom: 24px;
+
+    margin: 0 auto; /* ✅ centré horizontalement */
+}
+
+.form-container button:active {
+    scale: 0.95;
+}
+
+.form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #717171;
+    font-weight: 600;
+    font-size: 12px;
+    padding: center;
+}
+
+.form-container .form-group input {
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 100px;
+    color: #000000;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+    width: 100%;
+    padding: 32px 0px;
+    border-radius: 25px;
+    resize: none;
+    color: #000000;
+    height: 96px;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+    opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+    outline: none;
+    border-color: #e81cff;
+}
+
+.form-container .form-group textarea:focus {
+    outline: none;
+    border-color: #e81cff;
+}
+
+.form-container .form-submit-btn {
+    align-self: left; /* ✅ Centrage horizontal dans le formulaire */
+    font-family: roboto, sans-serif;
+    color: #717171;
+    font-weight: 600;
+    width: fit-content;
+    background: transparent;
+    border: 1.5px solid #b99cff;
+    padding: 14px 32px;
+    font-size: 0.9rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+    margin-top: 20px;
+}
+
+.form-container .form-submit-btn:hover {
+    background: #b99cff;
+    color: #8a38f5;
+    border-color: #b99cff;
+}
+
+.form-container .form-submit-btn:hover {
+    background-color: #f9f4ff;
+    border-color: #fff;
 }

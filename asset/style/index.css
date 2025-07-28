@@ -1,8 +1,17 @@
 /* Background Container */
+.header {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
 .container {
     width: 100%;
     height: 100%;
-    /* Add your background pattern here */
     background-color: #ffffff;
     background-image: radial-gradient(
         rgba(12, 12, 12, 0.171) 2px,
@@ -32,11 +41,11 @@
 }
 
 body {
-    font-family: "Inter", "Roboto", sans-serif;
-    background: #fff;
-    color: #bcbcbc;
     margin: 0;
     padding: 0;
+    font-family: "Inter", "Roboto", sans-serif;
+    background: #fff;
+    color: #222;
 }
 
 .logo {
@@ -46,10 +55,10 @@ body {
 
 header {
     display: flex;
-    align-items: center; /* centre verticalement */
+    align-items: center; 
     justify-content: space-between;
-    height: 124px; /* adapte si besoin */
-    padding: 0 32px; /* optionnel, marges sur les côtés */
+    height: 124px; 
+    padding: 0 32px; 
     width: 100%;
     box-sizing: border-box;
 }
@@ -82,7 +91,24 @@ header {
 .header-right {
     justify-content: flex-end; /* Vide, mais permet d'équilibrer l'espace */
 }
-
+.btn-contact {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1.5px solid #b99cff;
+    background: transparent;
+    border-radius: 30px;
+    padding: 14px 32px;
+    font-size: 0.9rem;
+    color: #222;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+.btn-contact:hover {
+    background: #f9f4ff;
+    border: none;
+    color: #8a38f5;
+}
 .btn-contact,
 .btn,
 .btn-contact-big {
@@ -96,6 +122,14 @@ header {
     cursor: pointer;
     margin: 50 px;
     transition: border-color 0.2s;
+}
+
+.btn-contact:hover,
+.btn:hover,
+.btn-contact-big:hover {
+    background: #f9f4ff;
+    border: none;
+    color: #8a38f5;
 }
 
 /* From Uiverse.io by gharsh11032000 */
@@ -115,7 +149,6 @@ header {
     border-radius: 999px;
     cursor: pointer;
 }
-
 .button::before {
     content: "";
     position: absolute;
@@ -153,64 +186,6 @@ header {
 .button:active::before {
     scale: 0.7;
 }
-button,
-.button {
-    .button {
-        position: relative;
-        width: 60px;
-        height: 52px;
-        background-color: #000;
-        display: flex;
-        align-items: center;
-        color: white;
-        flex-direction: column;
-        justify-content: center;
-        border: none;
-        padding: 12px;
-        gap: 12px;
-        border-radius: 999px;
-        cursor: pointer;
-    }
-
-    .button::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        left: -4px;
-        top: -1px;
-        margin: auto;
-        width: 70px;
-        height: 52px;
-        border-radius: 999px;
-        background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
-        z-index: -10;
-        pointer-events: none;
-        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    .button::after {
-        content: "";
-        z-index: -1;
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
-        transform: translate3d(0, 0, 0) scale(0.95);
-        filter: blur(20px);
-    }
-
-    .button:hover::after {
-        filter: blur(30px);
-    }
-
-    .button:hover::before {
-        transform: rotate(-180deg);
-    }
-
-    .button:active::before {
-        scale: 0.7;
-    }
-    /* même styles que dans .button */
-}
 
 .btn-contact-big {
     font-size: 1.4rem;
@@ -232,6 +207,9 @@ button,
     max-width: 100%;
     margin-bottom: 16px;
 }
+.hero :hover h1 {
+    color: #2d2d2d;
+}
 .choix {
     display: flex;
     justify-content: flex-start;
@@ -242,6 +220,11 @@ button,
 .etapes {
     margin: 60px 0;
     text-align: center;
+}
+.etape-icon:hover {
+    background: #f9f4ff;
+    border: none;
+    color: #8a38f5;
 }
 
 .grid-etapes {
@@ -327,7 +310,11 @@ footer {
     justify-content: center;
     margin-bottom: 18px;
 }
-
+.etape-icon:hover {
+    background: #f9f4ff;
+    border: none;
+    color: #8a38f5;
+}
 .etape-icon img {
     max-width: 44px;
     max-height: 44px;
@@ -341,6 +328,9 @@ footer {
     margin: 10px 0 8px 0;
     text-align: left;
 }
+.etape:hover h3 {
+    color: #2d2d2d;
+}
 
 .etape p {
     color: #bcbcbc;
@@ -350,7 +340,9 @@ footer {
     opacity: 0.8;
     text-align: left;
 }
-
+.etape:hover p {
+    color: #2d2d2d;
+}
 .projets-tableau table {
     width: 100%;
     border-collapse: separate; /* Espace entre les lignes */
@@ -384,67 +376,71 @@ footer {
     margin: 0 0 300px 0;
     max-width: 95%;
 }
-.arrow {
-    width: 38px;
-    margin-top: 280px;
-    filter: grayscale(100%) brightness(0.7);
-    display: block;
-    .projet-image {
-        background: #fff;
-        width: 30%;
-        height: 350px; /* ou essaye 100%, ou 50vh selon le besoin */
-        text-align: right;
-        vertical-align: middle;
-        display: flex;
-        align-items: stretch;
+.projets-tableau .projet {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 40px;
+    gap: 24px;
+}
+
+.projet-text {
+    flex: 1 1 0;
+}
+
+.projet-image {
+    background: #fff;
+    width: 600px;
+    height: 500px;
+    text-align: right;
+    vertical-align: middle;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    overflow: hidden; /* nécessaire pour contenir le zoom */
+    position: relative; /* nécessaire pour que l'image soit "contenue" */
+    border-radius: 0px;
+}
+
+.projet-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.projet-image:hover img {
+    transform: scale(1.1); /* zoom fluide */
+}
+
+@media (max-width: 850px) {
+    .projets-tableau .projet {
+        flex-direction: column;
+        gap: 0;
     }
 
-    .projets-tableau .projet {
-        display: flex;
-        align-items: stretch;
-        margin-bottom: 40px;
-        gap: 24px;
-    }
-    .projet-text {
-        flex: 1 1 0;
-    }
+    .projet-text,
     .projet-image {
-        flex: 1 1 0;
-        height: 350px;
-        display: flex;
-        align-items: stretch;
-        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: left;
     }
+
+    .projet-image {
+        height: 190px;
+        margin-bottom: 16px;
+    }
+
     .projet-image img {
-        width: auto;
+        width: 100%;
         height: 100%;
+        max-width: none;
+        max-height: none;
         object-fit: cover;
-        border-radius: 12px;
+        transition: transform 0.4s ease;
     }
-    @media (max-width: 850px) {
-        .projets-tableau .projet {
-            flex-direction: column;
-            gap: 0;
-        }
-        .projet-text,
-        .projet-image {
-            width: 100%;
-            max-width: 100%;
-            margin: 0 auto;
-            text-align: left;
-        }
-        .projet-image {
-            height: 190px;
-            margin-bottom: 16px;
-        }
-        .projet-image img {
-            max-width: 95vw;
-            max-height: 190px;
-            width: auto;
-            height: 100%;
-            margin: 0 auto;
-            border-radius: 14px;
-        }
-        
+
+    .projet-image:hover img {
+        transform: scale(1.1);
     }
 }

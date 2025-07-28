@@ -55,10 +55,10 @@ body {
 
 header {
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: space-between;
-    height: 124px; 
-    padding: 0 32px; 
+    height: 124px;
+    padding: 0 32px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -68,7 +68,7 @@ header {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 90px 20px; /* <--- ICI ! (vertical horizontal) */
+    gap: 90px 20px;
     background: #fff;
 }
 
@@ -89,7 +89,7 @@ header {
 }
 
 .header-right {
-    justify-content: flex-end; /* Vide, mais permet d'équilibrer l'espace */
+    justify-content: flex-end;
 }
 .btn-contact {
     position: absolute;
@@ -132,7 +132,6 @@ header {
     color: #8a38f5;
 }
 
-/* From Uiverse.io by gharsh11032000 */
 .button {
     position: relative;
     width: 60px;

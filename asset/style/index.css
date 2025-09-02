@@ -581,34 +581,33 @@ footer {
     overflow: hidden;
     transition-duration: 0.3s;
     border-radius: 30px;
-     border: 1.5px solid #b99cff;
+    border: 1.5px solid #b99cff;
 }
 /* instagram*/
 .containerOne:hover {
-    background-color: #F9F4FF;
-    border-color: #F9F4FF;
+    background-color: #f9f4ff;
+    border-color: #f9f4ff;
     transition-duration: 0.3s;
     transform: scale(1.2);
-     
 }
 /* twitter*/
 .containerTwo:hover {
-    background-color: #F9F4FF;
-     border-color: #F9F4FF;
+    background-color: #f9f4ff;
+    border-color: #f9f4ff;
     transition-duration: 0.3s;
     transform: scale(1.2);
 }
 /* linkdin*/
 .containerThree:hover {
-    background-color: #F9F4FF;
-     border-color: #F9F4FF;
+    background-color: #f9f4ff;
+    border-color: #f9f4ff;
     transition-duration: 0.3s;
     transform: scale(1.2);
 }
 /* Whatsapp*/
 .containerFour:hover {
-    background-color: #F9F4FF;
-     border-color: #F9F4FF;
+    background-color: #f9f4ff;
+    border-color: #f9f4ff;
     transition-duration: 0.3s;
     transform: scale(1.2);
 }
@@ -651,4 +650,27 @@ footer {
     margin: 12px auto;
     border: 1.5px solid #b99cff;
     margin: 12px auto 32px auto;
+}
+a.value {
+    text-decoration: none; /* enlève le souligné */
+}
+
+a.value:hover {
+    text-decoration: none; /* garde sans souligné au survol */
+}
+a.value {
+    font-size: 14px; /* mets la même valeur que tes autres boutons nav */
+    font-weight: 500; /* idem, ajuste selon ton design */
+    color: white; /* pour rester cohérent */
+    text-decoration: none;
+}
+a.value {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+}
+
+a.value:hover {
+    text-decoration: none;
 }

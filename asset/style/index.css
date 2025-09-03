@@ -711,10 +711,10 @@ a.value:hover {
 /* ===== scope ===== */
 .tm-case {
     --text: #111;
-    --muted: #5d5d5d;
-    --line: #a985ff;
+    --muted: #949494;
+    --line: #000000;
     --card: #f5f5f8;
-    --grad: linear-gradient(90deg, #7d49c9, #3bc8d7);
+    --grad: linear-gradient(90deg, #000000, #3bc8d7);
     --shadow: 0 10px 36px rgba(0, 0, 0, 0.06);
     --r: 18px;
     --xxl: 6rem;
@@ -987,8 +987,8 @@ a.value:hover {
 }
 /* ===== Timeline PRO (scopé) ===== */
 .tm-case {
-    --tm-grad: linear-gradient(90deg, #7d49c9, #3bc8d7);
-    --tm-line: #a985ff;
+    --tm-grad: linear-gradient(90deg, #000000, #3bc8d7);
+    --tm-line: #000000;
     --tm-card: rgba(255, 255, 255, 0.75);
     --tm-border: rgba(170, 170, 190, 0.28);
     --tm-shadow: 0 10px 30px rgba(20, 16, 40, 0.08);

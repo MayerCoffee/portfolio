@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=, initial-scale=1.0" />
-        <title>Projet - Tone-Maker</title>
+        <title>Projet - Teams</title>
         <link rel="stylesheet" href="asset/style/index.css" />
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&family=Roboto:wght@400;500&display=swap"
@@ -24,326 +24,118 @@
             </div>
             <div class="header-right"></div>
         </header>
-        <!-- ========= CASE STUDY (airy) ========= -->
-        <main class="case-study airy">
-            <!-- TOC -->
-            <nav class="cs-toc" aria-label="Case navigation">
-                <ul>
-                    <li><a href="#overview">Overview</a></li>
-                    <li><a href="#solution">Solution</a></li>
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#ideation">Ideation</a></li>
-                    <li><a href="#wireframe">Wireframe</a></li>
-                    <li><a href="#designsystem">Design System</a></li>
-                    <li><a href="#prototype">Prototype</a></li>
-                    <li><a href="#reflection">Reflection</a></li>
+        <!-- === TON CONTENU PROJET, SANS NOUVEAU <body> === -->
+        <main class="tm-case">
+            <!-- HERO -->
+            <section class="tm-hero">
+                <figure class="tm-hero-media">
+                    <img
+                        src="asset/IMG/tonemakerimg.png"
+                        alt="Tone Maker mockup"
+                    />
+                </figure>
+
+                <!-- Métadonnées du projet -->
+                <ul class="tm-meta">
+                    <li><span>Durée</span><b>8 semaines</b></li>
+                    <li><span>Problème</span><b>Choix complexe, jargon</b></li>
+                    <li><span>Industry</span><b>Music / E-commerce</b></li>
+                    <li><span>Contribution</span><b>UX • UI • Prototype</b></li>
+                    <li><span>Plateforme</span><b>Web • Mobile</b></li>
                 </ul>
-            </nav>
+            </section>
 
-            <!-- CONTENT -->
-            <section class="cs-content">
-                <!-- OVERVIEW -->
-                <section id="overview" class="cs-block">
-                    <div class="heading">
-                        <span class="hairline"></span>
-                        <h1>
-                            Tone Maker — customiser sa guitare, révéler son
-                            identité
-                        </h1>
-                    </div>
+            <!-- Titre -->
+            <section class="tm-title">
+                <h1>Tone Maker</h1>
+                <p class="lead">Customiser sa guitare, révéler son identité</p>
+            </section>
 
-                    <div class="intro-grid">
-                        <div class="intro-text flow measure">
-                            <p class="kicker">UI/UX end-to-end</p>
-                            <p class="lead">
-                                Configurateur simple, visuels immersifs, et
-                                guidance douce pour tous niveaux.
-                            </p>
-                            <ul class="meta">
-                                <li><strong>Rôle</strong> : UX • UI</li>
-                                <li><strong>Durée</strong> : 8 sem.</li>
-                                <li><strong>Outils</strong> : Figma, FigJam</li>
-                            </ul>
-                        </div>
-                        <!-- Grand visuel pour respirer -->
-                        <figure class="intro-media media-xl">
-                            <img
-                                src="assets/img/tone-hero.png"
-                                alt="Mockups Tone Maker"
-                            />
-                        </figure>
-                    </div>
-                </section>
-
-                <!-- SOLUTION (3 points clés concis) -->
-                <section id="solution" class="cs-block">
-                    <div class="heading">
-                        <span class="hairline"></span>
-                        <h2>Solution</h2>
-                    </div>
-
-                    <div class="cols-3 soft gap-xl">
-                        <div class="bullet flow measure">
-                            <h3>Parcours guidé</h3>
-                            <p>4 étapes claires et feedbacks continus.</p>
-                        </div>
-                        <div class="bullet flow measure">
-                            <h3>Accessibilité</h3>
-                            <p>
-                                Contrastes AA, focus visible, langage
-                                non-technique.
-                            </p>
-                        </div>
-                        <div class="bullet flow measure">
-                            <h3>Inspiration</h3>
-                            <p>
-                                Galerie + tags (Rock, Blues, Folk) et templates.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- RESEARCH (une colonne de texte courte + bande d’images) -->
-                <section id="research" class="cs-block">
-                    <div class="heading">
-                        <span class="hairline"></span>
-                        <h2>Research</h2>
-                    </div>
-
-                    <div class="cols-2 gap-xxl">
-                        <div class="flow measure">
-                            <h3 class="under">Cibles & insights</h3>
-                            <ul class="bullets">
-                                <li>
-                                    Amateurs : personnaliser sans se ruiner.
-                                </li>
-                                <li>
-                                    Pros/Créateurs : rapidité + pièces premium.
-                                </li>
-                                <li>
-                                    Luthiers/Écoles : visibilité & extension
-                                    d’offre.
-                                </li>
-                            </ul>
-
-                            <div class="stats-line">
-                                <div class="pill">
-                                    <span>58.3%</span> intéressés
-                                </div>
-                                <div class="pill">
-                                    <span>53.8%</span> corps custom
-                                </div>
-                                <div class="pill">
-                                    <span>66.7%</span> test avant achat
-                                </div>
-                            </div>
-
-                            <h3 class="under">Opportunités</h3>
-                            <ul class="checks">
-                                <li>Glossaire visuel + micro-copies</li>
-                                <li>Progression courte & visible</li>
-                                <li>Récap sticky (prix + compatibilités)</li>
-                            </ul>
-                        </div>
-
-                        <!-- Bande benchmark = + d’images -->
-                        <div class="bench-strip">
-                            <figure>
-                                <img
-                                    src="assets/img/bench-1.png"
-                                    alt="Warmoth"
-                                />
-                                <figcaption>
-                                    Richesse d’options, peu de guidance.
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img src="assets/img/bench-2.png" alt="Halo" />
-                                <figcaption>
-                                    Configurateur clair, pas d’aide débutant.
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img
-                                    src="assets/img/bench-3.png"
-                                    alt="Thomann"
-                                />
-                                <figcaption>
-                                    Très lisible, non orienté custom.
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- IDEATION (très court) -->
-                <section id="ideation" class="cs-block">
-                    <div class="heading">
-                        <span class="hairline"></span>
-                        <h2>Ideation</h2>
-                    </div>
-
-                    <div class="cols-2 gap-xl">
-                        <div class="flow measure">
-                            <h3 class="under">HMW</h3>
-                            <ul class="bullets">
-                                <li>
-                                    Choisir un <strong>bois</strong> sans jargon
-                                </li>
-                                <li>
-                                    <strong>Prévisualiser</strong> en 2 clics
-                                </li>
-                                <li>
-                                    <strong>Rassurer</strong> sur compatibilités
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="flow measure">
-                            <h3 class="under">Pistes retenues</h3>
-                            <ul class="checks">
-                                <li>Templates par style</li>
-                                <li>
-                                    Cartes “bois” (chaud/équilibré/brillant)
-                                </li>
-                                <li>Badges & filtres par tags</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- WIREFRAME (grandes images, captions discrets) -->
-                <section id="wireframe" class="cs-block">
-                    <div class="heading">
-                        <span class="hairline"></span>
-                        <h2>Wireframe</h2>
-                    </div>
-
-                    <div class="media-grid big gap-xxl">
-                        <figure>
-                            <img
-                                src="assets/img/wf-01.png"
-                                alt="Wireframe accueil"
-                            />
-                            <figcaption>Accueil • Choix modèle</figcaption>
-                        </figure>
-                        <figure>
-                            <img
-                                src="assets/img/wf-02.png"
-                                alt="Wireframe configurateur"
-                            />
-                            <figcaption>
-                                Configurateur • Étapes courtes
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img
-                                src="assets/img/wf-03.png"
-                                alt="Wireframe panier"
-                            />
-                            <figcaption>Panier • Récap sticky</figcaption>
-                        </figure>
-                    </div>
-                </section>
-
-                <!-- DESIGN SYSTEM (tokens en respirant + UI shots pleine largeur) -->
-                <section id="designsystem" class="cs-block">
-                    <div class="heading">
-                        <span class="hairline"></span>
-                        <h2>Design System</h2>
-                    </div>
-
-                    <div class="tokens gap-xl">
-                        <article class="token flow">
-                            <h4>Couleurs</h4>
-                            <div class="swatches">
-                                <span class="sw s1" title="#7D49C9"></span>
-                                <span class="sw s2" title="#3BC8D7"></span>
-                                <span class="sw s3" title="#111111"></span>
-                                <span class="sw s4" title="#F5F5F7"></span>
-                            </div>
-                        </article>
-                        <article class="token flow">
-                            <h4>Typographie</h4>
-                            <p class="display">Display — 700</p>
-                            <p>Texte — 400 / 600</p>
-                        </article>
-                        <article class="token flow">
-                            <h4>Composants</h4>
-                            <ul class="bullets">
-                                <li>CTA pill dégradé</li>
-                                <li>Chips / Tags</li>
-                                <li>Steps & Progress</li>
-                            </ul>
-                        </article>
-                    </div>
-
-                    <figure class="media-xl">
-                        <img src="assets/img/ui-01.png" alt="Boutons & états" />
-                    </figure>
-                </section>
-
-                <!-- PROTOTYPE (1 grande image + bloc court) -->
-                <section id="prototype" class="cs-block">
-                    <div class="heading">
-                        <span class="hairline"></span>
-                        <h2>Prototype</h2>
-                    </div>
-
-                    <figure class="media-xl">
-                        <img
-                            src="assets/img/proto-phones.png"
-                            alt="Prototype mobile"
-                        />
-                    </figure>
-                    <p class="measure muted">
-                        CTA “Créer ma guitare”, bloc “Guide IA personnalisé”,
-                        section “Inspirez-vous”.
+            <!-- 3 blocs -->
+            <section class="tm-triptych">
+                <article class="trip-card">
+                    <h3>Problème</h3>
+                    <p>
+                        Vocabulaire technique, étapes longues, peu d’aide pour
+                        débuter.
                     </p>
-                </section>
+                </article>
+                <article class="trip-card">
+                    <h3>Goals</h3>
+                    <p>
+                        Décider vite, comprendre l’impact (son/bois), voir prix
+                        & compat en continu.
+                    </p>
+                </article>
+                <article class="trip-card">
+                    <h3>Solution</h3>
+                    <p>
+                        Parcours 4 étapes, micro-copies + glossaire, récap
+                        sticky, templates.
+                    </p>
+                </article>
+            </section>
 
-                <!-- REFLECTION + CTA FIGMA -->
-                <section id="reflection" class="cs-block">
-                    <div class="heading">
-                        <span class="hairline"></span>
-                        <h2>Reflection</h2>
-                    </div>
-
-                    <div class="cols-2 gap-xl">
-                        <ul class="bullets measure">
-                            <li>
-                                Onboarding + micro-copies : barrière vocabulaire
-                                levée
-                            </li>
-                            <li>Récap sticky : + confiance, - anxiété</li>
-                            <li>Visuels immersifs : meilleur engagement</li>
-                        </ul>
-                        <ul class="checks measure">
-                            <li>Prévisualisation 3D / AR</li>
-                            <li>Modes d’accessibilité</li>
-                            <li>Click-and-collect étendu</li>
-                        </ul>
-                    </div>
-
-                    <div class="cta-line">
-                        <!-- Mets ton vrai lien Figma -->
-                        <a
-                            class="btn-cta"
-                            href="https://www.figma.com/"
-                            target="_blank"
-                            rel="noopener"
-                            >Voir le prototype Figma</a
-                        >
-                        <a
-                            class="btn-ghost"
-                            href="assets/docs/dossier.pdf"
-                            target="_blank"
-                            rel="noopener"
-                            >Dossier (PDF)</a
-                        >
-                    </div>
-                </section>
+            <!-- Timeline rail -->
+            <section class="tm-timeline rail-view">
+                <div class="tl-head"><h2>Project Timeline</h2></div>
+                <ol class="rail-track">
+                    <li class="milestone">
+                        <div class="iconbox">🔎</div>
+                        <span class="stem"></span>
+                        <div class="caption">
+                            <h4>Exploration</h4>
+                            <p class="sub">Objectifs, scope, risques</p>
+                            <span class="days">3 j</span>
+                        </div>
+                    </li>
+                    <li class="milestone">
+                        <div class="iconbox">🧭</div>
+                        <span class="stem"></span>
+                        <div class="caption">
+                            <h4>Benchmark</h4>
+                            <p class="sub">Warmoth, Halo, Thomann</p>
+                            <span class="days">2 j</span>
+                        </div>
+                    </li>
+                    <li class="milestone">
+                        <div class="iconbox">👥</div>
+                        <span class="stem"></span>
+                        <div class="caption">
+                            <h4>Recherche</h4>
+                            <p class="sub">Questionnaire & personas</p>
+                            <span class="days">3 j</span>
+                        </div>
+                    </li>
+                    <li class="milestone">
+                        <div class="iconbox">💡</div>
+                        <span class="stem"></span>
+                        <div class="caption">
+                            <h4>Idéation</h4>
+                            <p class="sub">HMW, user flows</p>
+                            <span class="days">5 j</span>
+                        </div>
+                    </li>
+                    <li class="milestone">
+                        <div class="iconbox">📐</div>
+                        <span class="stem"></span>
+                        <div class="caption">
+                            <h4>Wireframes</h4>
+                            <p class="sub">Low → Mid</p>
+                            <span class="days">3 j</span>
+                        </div>
+                    </li>
+                    <li class="milestone">
+                        <div class="iconbox">🎛️</div>
+                        <span class="stem"></span>
+                        <div class="caption">
+                            <h4>UI & Proto</h4>
+                            <p class="sub">Hi-Fi + interactions</p>
+                            <span class="days">2 j</span>
+                        </div>
+                    </li>
+                </ol>
             </section>
         </main>
-        <!-- ========= /CASE STUDY ========= -->
     </body>
 </html>

@@ -1243,3 +1243,157 @@ a.value:hover {
 .milestone:hover .stem {
     opacity: 1;
 }
+:root {
+    --violet: #6400b0;
+    --blue: #36daff;
+    --green: #00ffa9;
+    --pink: #ff00fb;
+    --card: #ffffff; /* plus clair : blanc */
+    --muted: #6b7280;
+    --radius: 20px; /* coins un peu plus doux */
+    --shadow: none; /* on supprime l'ombre partout */
+}
+
+/* Section plus aérée */
+.user-journey {
+    margin-block: 80px; /* + d'espace autour */
+}
+
+.user-journey .container {
+    max-width: 1200px; /* plus large */
+    margin: 0 auto;
+    padding: 0 32px; /* padding augmenté */
+}
+
+/* Titre plus grand et léger visuellement */
+.uj-title {
+    font-family: Inter, sans-serif;
+    font-weight: 800;
+    font-size: clamp(34px, 5vw, 54px); /* + grand */
+    color: var(--violet);
+    margin-bottom: 40px; /* + d'espace sous le titre */
+    letter-spacing: -0.02em;
+}
+
+/* Timeline : on ENLÈVE la ligne verticale (fond pointillé) */
+.uj-timeline {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    position: relative;
+}
+.uj-timeline::before {
+    content: none !important; /* retire la ligne décorative */
+}
+
+/* Cards plus grandes, sans ombre, fond blanc, bordure très légère */
+.uj-step {
+    display: grid;
+    grid-template-columns: 72px 1fr; /* colonne index plus large */
+    gap: 20px; /* + d'espace interne */
+    margin-bottom: 28px; /* + d'espace entre cards */
+    padding: 24px; /* + d'espace dans la card */
+    background: var(--card);
+    border-radius: var(--radius);
+    border: 1px solid #f0f0f5; /* bordure subtile et claire */
+    box-shadow: none; /* pas d'ombre */
+    transition: transform 0.18s ease, background 0.18s ease,
+        border-color 0.18s ease;
+}
+
+/* Hover sobre, sans ombre */
+.uj-step:hover {
+    transform: translateY(-1px);
+    background: #ffffff; /* reste blanc */
+    border-color: #e9e9f2; /* léger feedback */
+}
+
+/* Index plus grand et très lisible */
+.uj-index {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: 18px; /* + grand */
+    background: radial-gradient(circle at 30% 30%, var(--blue), var(--pink));
+    color: #fff;
+    box-shadow: none; /* pas d'ombre autour du badge */
+    border: 4px solid #fff; /* anneau blanc minimal */
+}
+
+/* Contenus plus espacés et lisibles */
+.uj-content {
+    min-width: 0;
+}
+
+.uj-topline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 14px; /* + grand */
+    margin-bottom: 8px; /* + d'espace */
+    align-items: center;
+}
+
+.uj-stage {
+    font-weight: 800;
+    color: var(--violet);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.uj-kpis {
+    font-size: 13px; /* + grand */
+    color: var(--muted);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.kpi-dot {
+    width: 10px; /* + grand */
+    height: 10px;
+    border-radius: 50%;
+    background: var(--green);
+}
+
+/* Titres et textes plus grands et clairs */
+.uj-heading {
+    font-size: 22px; /* + grand */
+    font-weight: 800;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+}
+
+.uj-intent {
+    font-size: 16px; /* + grand */
+    color: #7a7f8a; /* un poil plus clair */
+    margin: 0;
+    line-height: 1.7; /* plus aéré */
+}
+/* Supprimer tout motif de fond en pointillés */
+.user-journey,
+.user-journey::before,
+.user-journey::after,
+.user-journey .container {
+    background: none !important;
+}
+
+/* Responsive : garder l’air sans tasser */
+@media (max-width: 640px) {
+    .uj-step {
+        grid-template-columns: 56px 1fr;
+        padding: 18px;
+    }
+    .uj-title {
+        margin-bottom: 28px;
+    }
+    .uj-heading {
+        font-size: 18px;
+    }
+    .uj-intent {
+        font-size: 15px;
+    }
+}

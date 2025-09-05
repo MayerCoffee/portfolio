@@ -1311,6 +1311,7 @@ a.value:hover {
     letter-spacing: -0.02em;
     margin: 0 0 20px; /* espace en dessous */
     font-size: 2.3rem;
+    margin-bottom: 0px;
 }
 .user-journey {
     background: none !important;
@@ -1319,4 +1320,11 @@ body,
 main,
 .user-journey {
     background-image: none !important;
+}
+/* Encadrés des étapes */
+.uj-step {
+    max-width: 500px; /* limite la largeur de chaque bloc */
+    border-radius: 20px;
+    border: 1px solid #f0f0f5;
+    background: #fff;
 }

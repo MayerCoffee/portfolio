@@ -1249,7 +1249,7 @@ a.value:hover {
     --radius: 20px; /* coins un peu plus doux */
     --shadow: none; /* on supprime l'ombre partout */
 }
-
+i
 /* Titre plus grand et léger visuellement */
 .uj-title {
     font-family: Inter, sans-serif;
@@ -1282,7 +1282,7 @@ a.value:hover {
     margin-bottom: 28px; /* + d'espace entre cards */
     padding: 24px; /* + d'espace dans la card */
     background: var(--card);
-    border-radius: var(--radius);
+    border-radius: var(--radus);
     border: 1px solid #f0f0f5; /* bordure subtile et claire */
     box-shadow: none; /* pas d'ombre */
     transition: transform 0.18s ease, background 0.18s ease,
@@ -1311,7 +1311,7 @@ a.value:hover {
     letter-spacing: -0.02em;
     margin: 0 0 20px; /* espace en dessous */
     font-size: 2.3rem;
-    margin-bottom: 0px;
+    margin-bottom: 50px;
 }
 .user-journey {
     background: none !important;
@@ -1323,8 +1323,23 @@ main,
 }
 /* Encadrés des étapes */
 .uj-step {
-    max-width: 500px; /* limite la largeur de chaque bloc */
+    max-width: 1200px; /* limite la largeur de chaque bloc */
     border-radius: 20px;
     border: 1px solid #f0f0f5;
     background: #fff;
+}
+/* Placement en 3 colonnes : index + contenu + image */
+.uj-step {
+    display: grid;
+    grid-template-columns: 72px 1fr 120px; /* 120px réservé à l’image */
+    align-items: center; /* centre verticalement */
+    gap: 20px;
+}
+
+/* Bloc image */
+.uj-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* arrondi léger */
+    object-fit: cover;
 }

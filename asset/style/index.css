@@ -744,16 +744,18 @@ a.value:hover {
 
 /* Pour aligner la barre d’infos avec le hero full-width */
 .tm-meta {
-    width: 100vw;
-    margin-left: calc(-50vw + 43%);
+    /* enlève le full-width */
+    width: 100%;
+    max-width: 1200px; /* comme ton container principal */
+    margin: 0 auto 0.9rem; /* auto = centrage */
     display: flex;
     flex-wrap: wrap;
     gap: 0.6rem;
-    justify-content: center; /* ou flex-start si tu veux aligné à gauche */
     list-style: none;
     padding: 0.8rem 1.2rem;
-    background: #fff; /* optionnel: fond blanc */
-    border-top: 1px solid #ececf2; /* pour marquer la séparation */
+    background: #fff;
+    border-top: 1px solid #ececf2;
+    margin-bottom: 200px;
 }
 
 .tm-meta li {
@@ -773,6 +775,7 @@ a.value:hover {
 .tm-title {
     margin: var(--xl) 0 var(--lg);
     margin-top: 100px;
+    
 }
 .tm-title h1 {
     margin: 0 0 0.5rem;
@@ -786,6 +789,10 @@ a.value:hover {
     color: var(--muted);
     font-size: 1.1rem;
     max-width: 62ch;
+}
+:root {
+    --container: 1200px; /* largeur max de ta grille centrale */
+    --gutter: 24px; /* marge interne gauche/droite de la grille */
 }
 
 /* Triptych */
@@ -822,6 +829,8 @@ a.value:hover {
     align-items: center;
     gap: 1rem;
     margin-bottom: 1rem;
+    line-height: 1.15;
+    font-size: 1.5rem;
 }
 .hairline {
     width: 72px;
@@ -1126,6 +1135,7 @@ a.value:hover {
 /* ===== Timeline RAIL — FIX ===== */
 .rail-view {
     margin-bottom: 4.5rem;
+    margin-top: 100px;
 }
 
 .tl-head {

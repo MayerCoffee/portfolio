@@ -175,26 +175,75 @@
         </main>
         <section class="tm-research">
             <h2 class="tm-research__title">Questionnaire exploratoire</h2>
+
+            <div class="tmc-carousel" aria-label="Résultats du questionnaire">
+                <button class="tmc-btn tmc-prev" aria-label="Précédent">
+                    ‹
+                </button>
+
+                <div class="tmc-viewport">
+                    <div class="tmc-track">
+                        <!-- 3 cards existantes -->
+                        <article class="tmc-slide">
+                            <img
+                                src="asset/IMG/interesser.png"
+                                alt="Groupe intéressé par la customisation"
+                            />
+                            <h3>Intéressés</h3>
+                            <p>58.3 % des répondants se disent intéressés.</p>
+                        </article>
+
+                        <article class="tmc-slide">
+                            <img
+                                src="asset/IMG/rock.png"
+                                alt="Jouer de la guitare rock"
+                            />
+                            <h3>Aiment le rock</h3>
+                            <p>33 % déclarent aimer le rock.</p>
+                        </article>
+
+                        <article class="tmc-slide">
+                            <img
+                                src="asset/IMG/jeune.png"
+                                alt="Jeune adulte 18–25 ans jouant de la guitare"
+                            />
+                            <h3>18–25 ans</h3>
+                            <p>25 % ont entre 18 et 25 ans.</p>
+                        </article>
+
+                        <!-- 3 nouvelles cards -->
+                        <article class="tmc-slide">
+                            <img
+                                src="asset/IMG/style.png"
+                                alt="Guitare customisée, style original"
+                            />
+                            <h3>Style originale</h3>
+                            <p>33,3 % déclarent avoir un style original.</p>
+                        </article>
+
+                        <article class="tmc-slide">
+                            <img
+                                src="asset/IMG/acoustique.png"
+                                alt="Personne jouant une guitare acoustique"
+                            />
+                            <h3>Acoustique</h3>
+                            <p>38,5 % possèdent une guitare acoustique.</p>
+                        </article>
+
+                        <article class="tmc-slide">
+                            <img
+                                src="asset/IMG/test.png"
+                                alt="Essai de guitare en magasin"
+                            />
+                            <h3>Tester avant achat</h3>
+                            <p>66,7 % aimeraient tester avant d’acheter.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <button class="tmc-btn tmc-next" aria-label="Suivant">›</button>
+            </div>
         </section>
-        <div class="tm-cards">
-            <article class="card">
-                <img src="asset/IMG/interesser.png" alt="Recherche visuel 1" />
-                <h3>Intéressés</h3>
-                <p>58.3 % des répondants se disent intéressés.</p>
-            </article>
-
-            <article class="card">
-                <img src="asset/IMG/rock.png" alt="Recherche visuel 2" />
-                <h3>Aiment le rock</h3>
-                <p>33 % déclarent aimer le rock.</p>
-            </article>
-
-            <article class="card">
-                <img src="asset/IMG/jeune.png" alt="Recherche visuel 3" />
-                <h3>18–25 ans</h3>
-                <p>25 % ont entre 18 et 25 ans.</p>
-            </article>
-        </div>
 
         <section class="user-journey" aria-labelledby="uj-title">
             <div class="container">
@@ -422,5 +471,35 @@
                 </ol>
             </div>
         </section>
+        <script>
+            (function () {
+                const viewport = document.querySelector(".tmc-viewport"); // c'est LUI qui scrolle
+                const track = document.querySelector(".tmc-track");
+                const prevBtn = document.querySelector(".tmc-btn.tmc-prev");
+                const nextBtn = document.querySelector(".tmc-btn.tmc-next");
+                if (!viewport || !track) return;
+
+                const snapTo = (dir) => {
+                    const step = viewport.clientWidth; // largeur visible (3 cards sur desktop)
+                    viewport.scrollBy({ left: dir * step, behavior: "smooth" });
+                };
+
+                const updateButtons = () => {
+                    const maxScroll =
+                        track.scrollWidth - viewport.clientWidth - 1;
+                    prevBtn.disabled = viewport.scrollLeft <= 0;
+                    nextBtn.disabled = viewport.scrollLeft >= maxScroll;
+                };
+
+                prevBtn.addEventListener("click", () => snapTo(-1));
+                nextBtn.addEventListener("click", () => snapTo(1));
+                viewport.addEventListener("scroll", () =>
+                    requestAnimationFrame(updateButtons)
+                );
+                window.addEventListener("resize", updateButtons);
+
+                updateButtons();
+            })();
+        </script>
     </body>
 </html>

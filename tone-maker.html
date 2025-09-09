@@ -328,233 +328,94 @@
                 </div>
             </div>
         </section>
+        <section class="journey">
+            <h2 class="journey-title">User Journey</h2>
 
-        <section class="user-journey" aria-labelledby="uj-title">
-            <div class="container">
-                <h2 id="uj-title" class="uj-title">User Journey</h2>
-
-                <ol class="uj-timeline" role="list">
-                    <li class="uj-step" tabindex="0">
-                        <div class="uj-index" aria-hidden="true">1</div>
-                        <div class="uj-content">
-                            <div class="uj-topline">
-                                <span class="uj-stage">Découverte</span>
-                                <div class="uj-kpis">
-                                    <span class="kpi-dot"></span>CTR carte “Tone
-                                    Maker”
+            <div class="journey-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Stages</th>
+                            <th>Découverte</th>
+                            <th>Recherche</th>
+                            <th>Customisation</th>
+                            <th>Essai</th>
+                            <th>Achat</th>
+                            <th>Fidélisation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="row-label">User goals</td>
+                            <td>Comprendre le concept</td>
+                            <td>Trouver des modèles adaptés</td>
+                            <td>Personnaliser sa guitare</td>
+                            <td>Tester son rendu</td>
+                            <td>Acheter facilement</td>
+                            <td>Partager & revenir</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">Activities</td>
+                            <td>Découvre Tone Maker via réseaux</td>
+                            <td>Explore la galerie & templates</td>
+                            <td>Utilise le configurateur 3D</td>
+                            <td>Prévisualise & compare options</td>
+                            <td>Passe commande</td>
+                            <td>Partage ses créations</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">Touchpoints & channels</td>
+                            <td>Instagram, TikTok</td>
+                            <td>Site Tone Maker</td>
+                            <td>UI configurateur</td>
+                            <td>Preview temps réel</td>
+                            <td>Checkout simple</td>
+                            <td>Galerie + communauté</td>
+                        </tr>
+                        <!-- Emotions (remplacer toute la ligne) -->
+                        <tr class="row-emotions">
+                            <td class="row-label">Emotions</td>
+                            <!-- on fusionne les 6 colonnes d'étapes -->
+                            <td colspan="6" class="emotion-cell">
+                                <div
+                                    class="emotion-graph"
+                                    role="img"
+                                    aria-label="Courbe de satisfaction"
+                                >
+                                    <svg
+                                        viewBox="0 0 1000 160"
+                                        preserveAspectRatio="none"
+                                    ></svg>
+                                    <div
+                                        class="emotion-emojis"
+                                        aria-hidden="true"
+                                    ></div>
                                 </div>
-                            </div>
-                            <h3 class="uj-heading">
-                                Carte projet sur la grille Portfolio
-                            </h3>
-                            <p class="uj-intent">
-                                But : éveiller la curiosité et obtenir un clic.
-                            </p>
-                        </div>
-                        <!-- 👉 Image ajoutée à droite -->
-                        <div class="uj-image">
-                            <img
-                                src="asset/IMG/1.png"
-                                alt="Illustration Découverte"
-                            />
-                        </div>
-                    </li>
-
-                    <li class="uj-step" tabindex="0">
-                        <div class="uj-index">2</div>
-                        <div class="uj-content">
-                            <div class="uj-topline">
-                                <span class="uj-stage">Page projet</span>
-                                <div class="uj-kpis">
-                                    <span class="kpi-dot"></span>Clic CTA
-                                </div>
-                            </div>
-                            <h3 class="uj-heading">Hero + badges + timeline</h3>
-                            <p class="uj-intent">
-                                But : comprendre le concept instantanément.
-                            </p>
-                        </div>
-                        <!-- 👉 Image ajoutée à droite -->
-                        <div class="uj-image">
-                            <img
-                                src="asset/IMG/2.png"
-                                alt="Illustration Découverte"
-                            />
-                        </div>
-                    </li>
-
-                    <li class="uj-step" tabindex="0">
-                        <div class="uj-index">3</div>
-                        <div class="uj-content">
-                            <div class="uj-topline">
-                                <span class="uj-stage">Proposition</span>
-                                <div class="uj-kpis">
-                                    <span class="kpi-dot"></span>Temps sur
-                                    section
-                                </div>
-                            </div>
-                            <h3 class="uj-heading">
-                                Problème → But → Solution
-                            </h3>
-                            <p class="uj-intent">
-                                Wizard 4 étapes + glossaire anti-jargon.
-                            </p>
-                        </div>
-                        <!-- 👉 Image ajoutée à droite -->
-                        <div class="uj-image">
-                            <img
-                                src="asset/IMG/3.png"
-                                alt="Illustration Découverte"
-                            />
-                        </div>
-                    </li>
-
-                    <li class="uj-step" tabindex="0">
-                        <div class="uj-index">4</div>
-                        <div class="uj-content">
-                            <div class="uj-topline">
-                                <span class="uj-stage">Wizard</span>
-                                <div class="uj-kpis">
-                                    <span class="kpi-dot"></span>Clic démo
-                                </div>
-                            </div>
-                            <h3 class="uj-heading">
-                                Étapes : Template → Design → Filtres → Aperçu
-                            </h3>
-                            <p class="uj-intent">
-                                But : se projeter dans l’usage.
-                            </p>
-                        </div>
-                        <!-- 👉 Image ajoutée à droite -->
-                        <div class="uj-image">
-                            <img
-                                src="asset/IMG/4.png"
-                                alt="Illustration Découverte"
-                            />
-                        </div>
-                    </li>
-
-                    <li class="uj-step" tabindex="0">
-                        <div class="uj-index">5</div>
-                        <div class="uj-content">
-                            <div class="uj-topline">
-                                <span class="uj-stage">Preuve</span>
-                                <div class="uj-kpis">
-                                    <span class="kpi-dot"></span>Clic recherche
-                                </div>
-                            </div>
-                            <h3 class="uj-heading">Stats clés utilisateurs</h3>
-                            <p class="uj-intent">
-                                70,8% veulent personnaliser le corps, 66,7%
-                                tester avant achat…
-                            </p>
-                        </div>
-                        <!-- 👉 Image ajoutée à droite -->
-                        <div class="uj-image">
-                            <img
-                                src="asset/IMG/5.png"
-                                alt="Illustration Découverte"
-                            />
-                        </div>
-                    </li>
-
-                    <li class="uj-step" tabindex="0">
-                        <div class="uj-index">6</div>
-                        <div class="uj-content">
-                            <div class="uj-topline">
-                                <span class="uj-stage">Story</span>
-                                <div class="uj-kpis">
-                                    <span class="kpi-dot"></span>Clic maquette
-                                </div>
-                            </div>
-                            <h3 class="uj-heading">Scénario “Louise”</h3>
-                            <p class="uj-intent">
-                                Click & Collect + essai + conseils d’expert.
-                            </p>
-                        </div>
-                        <!-- 👉 Image ajoutée à droite -->
-                        <div class="uj-image">
-                            <img
-                                src="asset/IMG/6.png"
-                                alt="Illustration Découverte"
-                            />
-                        </div>
-                    </li>
-
-                    <li class="uj-step" tabindex="0">
-                        <div class="uj-index">7</div>
-                        <div class="uj-content">
-                            <div class="uj-topline">
-                                <span class="uj-stage">Aide</span>
-                                <div class="uj-kpis">
-                                    <span class="kpi-dot"></span>Ouvertures FAQ
-                                </div>
-                            </div>
-                            <h3 class="uj-heading">Glossaire anti-jargon</h3>
-                            <p class="uj-intent">
-                                But : lever les freins débutants.
-                            </p>
-                        </div>
-                        <!-- 👉 Image ajoutée à droite -->
-                        <div class="uj-image">
-                            <img
-                                src="asset/IMG/7.png"
-                                alt="Illustration Découverte"
-                            />
-                        </div>
-                    </li>
-
-                    <li class="uj-step" tabindex="0">
-                        <div class="uj-index">8</div>
-                        <div class="uj-content">
-                            <div class="uj-topline">
-                                <span class="uj-stage">Engagement</span>
-                                <div class="uj-kpis">
-                                    <span class="kpi-dot"></span>Likes /
-                                    Sauvegardes
-                                </div>
-                            </div>
-                            <h3 class="uj-heading">
-                                Templates populaires & galerie
-                            </h3>
-                            <p class="uj-intent">
-                                But : inspirer et démarrer vite.
-                            </p>
-                        </div>
-                        <!-- 👉 Image ajoutée à droite -->
-                        <div class="uj-image">
-                            <img
-                                src="asset/IMG/8.png"
-                                alt="Illustration Découverte"
-                            />
-                        </div>
-                    </li>
-
-                    <li class="uj-step" tabindex="0">
-                        <div class="uj-index">9</div>
-                        <div class="uj-content">
-                            <div class="uj-topline">
-                                <span class="uj-stage">Contact</span>
-                                <div class="uj-kpis">
-                                    <span class="kpi-dot"></span>Soumissions
-                                </div>
-                            </div>
-                            <h3 class="uj-heading">
-                                Formulaire minimal + sociaux
-                            </h3>
-                            <p class="uj-intent">But : passage à l’action.</p>
-                        </div>
-                        <!-- 👉 Image ajoutée à droite -->
-                        <div class="uj-image">
-                            <img
-                                src="asset/IMG/9.png"
-                                alt="Illustration Découverte"
-                            />
-                        </div>
-                    </li>
-                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">Pain points</td>
+                            <td>Jargon technique</td>
+                            <td>Explications limitées</td>
+                            <td>Trop d’options</td>
+                            <td>Prévisualisation pas assez réaliste</td>
+                            <td>Friction paiement</td>
+                            <td>Peu de suivi</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">Improvement opportunities</td>
+                            <td>Glossaire + micro-copies</td>
+                            <td>Tutos vidéo</td>
+                            <td>Filtres & catégories claires</td>
+                            <td>Preview AR/VR</td>
+                            <td>Checkout simplifié</td>
+                            <td>Programme communauté</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
+
         <script>
             (function () {
                 const viewport = document.querySelector(".tmc-viewport"); // c'est LUI qui scrolle
@@ -583,6 +444,91 @@
                 window.addEventListener("resize", updateButtons);
 
                 updateButtons();
+            })();
+        </script>
+        <script>
+            /* Courbe “Emotions” intégrée à la ligne du tableau */
+            (function () {
+                const wrap = document.querySelector(".emotion-graph");
+                const svg = document.querySelector(".emotion-graph svg");
+                const layer = document.querySelector(".emotion-emojis");
+                if (!wrap || !svg || !layer) return;
+
+                // Scores (0–100) par étape : Découverte → Recherche → Customisation → Essai → Achat → Fidélisation
+                const scores = [42, 58, 78, 63, 82, 88];
+                const emojis = ["🤔", "🙂", "😍", "😮", "🤩", "🥰"];
+
+                const W = 1000,
+                    H = 160; // viewBox du SVG
+                const PADX = 24,
+                    PADY = 18; // marges internes
+                const innerW = W - PADX * 2,
+                    innerH = H - PADY * 2;
+                const n = scores.length;
+                const xStep = innerW / (n - 1);
+                const toY = (v) => PADY + ((100 - v) / 100) * innerH;
+                const points = scores.map((v, i) => [PADX + i * xStep, toY(v)]);
+
+                // Gradient
+                const grad = `
+    <defs>
+      <linearGradient id="jgGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%"  stop-color="#7d49c9"/>
+        <stop offset="100%" stop-color="#3bc8d7"/>
+      </linearGradient>
+    </defs>`;
+
+                // Path lissé (Catmull-Rom -> Bézier)
+                function curvePath(pts) {
+                    if (pts.length < 2) return "";
+                    let d = `M ${pts[0][0]},${pts[0][1]}`;
+                    for (let i = 0; i < pts.length - 1; i++) {
+                        const p0 = pts[i === 0 ? 0 : i - 1],
+                            p1 = pts[i],
+                            p2 = pts[i + 1],
+                            p3 = pts[i + 2] || p2;
+                        const c1x = p1[0] + (p2[0] - p0[0]) / 6,
+                            c1y = p1[1] + (p2[1] - p0[1]) / 6;
+                        const c2x = p2[0] - (p3[0] - p1[0]) / 6,
+                            c2y = p2[1] - (p3[1] - p1[1]) / 6;
+                        d += ` C ${c1x},${c1y} ${c2x},${c2y} ${p2[0]},${p2[1]}`;
+                    }
+                    return d;
+                }
+
+                const path = curvePath(points);
+                const circles = points
+                    .map(
+                        ([x, y]) =>
+                            `<circle cx="${x}" cy="${y}" r="4.5" fill="#fff" stroke="url(#jgGrad)" stroke-width="3"/>`
+                    )
+                    .join("");
+
+                svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+                svg.innerHTML =
+                    grad +
+                    `<path d="${path}" fill="none" stroke="url(#jgGrad)" stroke-width="4"/>${circles}`;
+
+                // Positionner les emojis (en unités CSS, donc % sur la largeur, px pour la hauteur)
+                const setEmojis = () => {
+                    const box = wrap.getBoundingClientRect();
+                    const w = box.width,
+                        h = box.height;
+                    layer.innerHTML = ""; // reset
+                    points.forEach(([x, y], i) => {
+                        const el = document.createElement("span");
+                        el.className = "emoji";
+                        const left = (x / W) * 100; // % horizontal -> suit le redimensionnement
+                        const top = (y / H) * h; // px vertical selon la hauteur réelle
+                        el.style.left = left + "%";
+                        el.style.top = top + "px";
+                        el.textContent = emojis[i];
+                        layer.appendChild(el);
+                    });
+                };
+
+                setEmojis();
+                window.addEventListener("resize", setEmojis);
             })();
         </script>
     </body>

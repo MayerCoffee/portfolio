@@ -1703,3 +1703,146 @@ main,
         height: 220px;
     }
 }
+/* Section */
+.journey {
+    max-width: 1280px;
+    margin: 0 auto 96px;
+    padding: 0 6%;
+}
+.journey-title {
+    margin: 60px 0 24px;
+    font: 600 clamp(28px, 4vw, 42px) / 1.2 Inter, sans-serif;
+    color: #111;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+/* Tableau + aération */
+.journey-table table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    font-size: 1rem;
+}
+.journey-table thead th {
+    background: #f6f6fb;
+    font-weight: 700;
+    padding: 18px 14px;
+    border-bottom: 1px solid #e6e6f1;
+    white-space: nowrap;
+}
+.journey-table tbody td {
+    padding: 18px 14px;
+    line-height: 1.45;
+    border-top: 1px solid #f0f0f6;
+    vertical-align: top;
+}
+.journey-table tbody tr:nth-child(odd) td:not(.row-label) {
+    background: #fcfcff;
+}
+.row-label {
+    position: sticky;
+    left: 0;
+    background: #fafafe;
+    border-right: 1px solid #eee;
+    font-weight: 700;
+    text-align: left;
+    min-width: 180px;
+    z-index: 1;
+    border-top: 1px solid #f0f0f6;
+}
+
+/* Responsive : on réduit sans casser la structure */
+@media (max-width: 1100px) {
+    .journey-table table {
+        font-size: 0.92rem;
+    }
+    .journey-table tbody td,
+    .journey-table thead th {
+        padding: 14px 10px;
+    }
+}
+@media (max-width: 780px) {
+    .journey-table table {
+        font-size: 0.85rem;
+    }
+    .journey-table tbody td,
+    .journey-table thead th {
+        padding: 10px 8px;
+    }
+}
+
+/* Courbe de satisfaction */
+.journey-sentiment {
+    margin-top: 22px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 12px 10px 8px;
+}
+.journey-sentiment svg {
+    width: 100%;
+    height: 180px;
+    display: block;
+}
+.journey-sentiment .sentiment-labels {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+    margin: 6px 6px 2px 6px;
+    list-style: none;
+    padding: 0;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+}
+/* ===== Courbe dans la cellule Emotions ===== */
+.emotion-cell {
+    padding: 8px 6px; /* un peu plus compacte que les autres lignes */
+    background: #fff;
+}
+
+.emotion-graph {
+    position: relative;
+    width: 100%;
+    height: 160px; /* hauteur de la courbe dans la cellule */
+    border-radius: 10px;
+    background: linear-gradient(#fafafe, #fafafe) padding-box,
+        linear-gradient(90deg, #eee 1px, transparent 1px) 0 0/16.66% 100%,
+        /* guides verticaux par étape */ linear-gradient(#f2f2f8, #f2f2f8); /* fond clair */
+    overflow: hidden;
+}
+
+.emotion-graph svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.emotion-emojis {
+    position: absolute;
+    inset: 0;
+    pointer-events: none; /* pas d’interaction, purement visuel */
+}
+
+.emotion-emojis .emoji {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 22px; /* taille des emojis */
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.12));
+}
+
+@media (max-width: 780px) {
+    .emotion-graph {
+        height: 140px;
+    }
+    .emotion-emojis .emoji {
+        font-size: 18px;
+    }
+}

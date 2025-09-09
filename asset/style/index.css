@@ -1623,3 +1623,83 @@ main,
         height: 220px;
     }
 }
+/* Section Persona */
+.persona-section {
+    max-width: 1280px;
+    margin: 0 auto 80px;
+    padding: 0 6%;
+}
+.persona-title {
+    margin: 60px 0 24px;
+    font: 600 2.3rem/1.2 Inter, sans-serif;
+    color: #111;
+    text-align: left;
+}
+
+/* Carrousel */
+.persona-carousel {
+    --gap: 16px;
+    position: relative;
+}
+.persona-viewport {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+.persona-viewport::-webkit-scrollbar {
+    display: none;
+}
+
+.persona-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 2 * var(--gap)) / 3);
+    gap: var(--gap);
+    align-items: stretch;
+}
+
+/* Card */
+.persona-card {
+    background: #fff;
+    border: 1px solid #ececf2;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    transition: box-shadow 0.2s ease;
+}
+.persona-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.persona-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.persona-content {
+    padding: 16px;
+}
+.persona-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.persona-card p {
+    margin: 0 0 8px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+    .persona-track {
+        grid-auto-columns: 100%;
+    }
+    .persona-card img {
+        height: 220px;
+    }
+}

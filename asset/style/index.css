@@ -1951,7 +1951,6 @@ main,
     margin: 8px auto 8px auto;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
     margin-bottom: 30px;
-
 }
 .bm-name {
     text-align: center;
@@ -1965,4 +1964,131 @@ main,
     font: 400 15px/1.5 Inter, system-ui, -apple-system, BlinkMacSystemFont,
         Segoe UI, Roboto, Helvetica, Arial;
     text-align: left;
+}
+/* ===== Concurrences ===== */
+.comp-section {
+    max-width: 1280px;
+    margin: 0 auto 96px;
+    padding: 0 6%;
+    font-weight: 500; /* graisse par défaut demandée */
+}
+
+.comp-title {
+    margin: 12px 0 24px;
+    font: 600 clamp(28px, 4vw, 42px) / 1.2 Inter, sans-serif; /* taille/gras demandés */
+    color: #111;
+    text-align: left;
+}
+
+.comp-audit {
+    position: relative;
+    background: transparent; /* ✅ plus de fond blanc */
+    border: none; /* ✅ plus de contour */
+    border-radius: 0;
+    padding: 0; /* ✅ plus de marge intérieure forcée */
+    box-shadow: none; /* ✅ supprime l’ombre */
+}
+
+.comp-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+.comp-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+.comp-name {
+    margin: 0;
+    font: 600 22px/1.2 Inter, sans-serif;
+}
+
+/* Screenshot */
+.comp-screen {
+    margin: 0;
+    padding: 0;
+    background: #f8f8fb;
+    border-radius: 16px;
+    overflow: hidden;
+    outline: 1px solid #e9e9f2;
+}
+.comp-screen img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Callouts façon “annotation rouge” */
+.comp-callouts {
+    position: relative;
+    min-height: 24px;
+    margin: 8px 0 16px;
+}
+.callout {
+    position: absolute;
+    max-width: 320px;
+    background: #fff;
+    border: 1.5px solid #ff5a6b;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(255, 90, 107, 0.12);
+    padding: 12px 14px;
+    z-index: 2;
+    /* ancrage relatif : coordonnées (%) avant l'image */
+    left: var(--x);
+    top: var(--y);
+    transform: translate(-50%, -50%);
+}
+.callout h4 {
+    margin: 0 0 6px;
+    font: 700 16px/1.25 Inter, sans-serif;
+    color: #111;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.callout p {
+    margin: 0;
+    font: 500 14px/1.45 Inter, sans-serif;
+    color: #333;
+}
+.callout .bad {
+    color: #ff3a50;
+    font-weight: 800;
+}
+
+/* flèche (leader) */
+.callout::after {
+    content: "";
+    position: absolute;
+    width: 84px;
+    height: 2px;
+    background: #ff5a6b;
+    top: 50%;
+    transform: translateY(-50%);
+    /* sens personnalisé via classes */
+}
+.callout.left::after {
+    right: -84px;
+}
+.callout.right::after {
+    left: -84px;
+}
+
+/* responsive : compacter les annotations et limiter chevauchement */
+@media (max-width: 980px) {
+    .callout {
+        max-width: 260px;
+    }
+}
+@media (max-width: 760px) {
+    .callout {
+        position: static;
+        transform: none;
+        margin: 10px 0;
+    }
+    .callout::after {
+        display: none;
+    }
 }

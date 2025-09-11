@@ -777,13 +777,14 @@ a.value:hover {
     margin-top: 100px;
 }
 .tm-title h1 {
-    margin: 0 0 0.5rem;
     font-size: 2.4rem;
     line-height: 1.15;
     background: var(--grad);
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; /* Safari/Chrome */
+    background-clip: text; /* ✅ Standard */
     -webkit-text-fill-color: transparent;
 }
+
 .tm-title .lead {
     color: var(--muted);
     font-size: 1.1rem;
@@ -2117,6 +2118,58 @@ main,
     width: 100%;
     height: auto;
     border-radius: 14px; /* optionnel, même DA que le reste */
+    outline: 1px solid #e9e9f2; /* optionnel */
+    background: #fff;
+}
+/* ===== Idéation ===== */
+.idea-section {
+    max-width: 1280px;
+    margin: 0 auto 80px;
+    padding: 0 6%;
+    font-weight: 500; /* graisse par défaut de la section */
+}
+
+.idea-title {
+    margin: 12px 0 24px;
+    font: 600 clamp(28px, 4vw, 42px) / 1.2 Inter, sans-serif;
+    color: #111;
+    text-align: left;
+}
+
+.idea-figure {
+    margin: 0;
+}
+.idea-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px; /* optionnel */
+    outline: 1px solid #e9e9f2; /* optionnel */
+    background: #fff;
+}
+/* ===== Wireframe & Prototypage ===== */
+.wf-section {
+    max-width: 1280px;
+    margin: 0 auto 80px;
+    padding: 0 6%;
+    font-weight: 500; /* graisse par défaut */
+}
+
+.wf-title {
+    margin: 12px 0 24px;
+    font: 600 clamp(28px, 4vw, 42px) / 1.2 Inter, sans-serif; /* style demandé */
+    color: #111;
+    text-align: left;
+}
+
+.wf-figure {
+    margin: 0;
+}
+.wf-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px; /* optionnel */
     outline: 1px solid #e9e9f2; /* optionnel */
     background: #fff;
 }

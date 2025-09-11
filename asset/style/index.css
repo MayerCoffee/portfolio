@@ -2092,3 +2092,31 @@ main,
         display: none;
     }
 }
+/* ===== Arborescence ===== */
+.arb-section {
+    max-width: 1280px;
+    margin: 0 auto 80px;
+    padding: 0 6%;
+    font-weight: 500; /* graisse par défaut de la section */
+}
+
+.arb-title {
+    margin: 12px 0 24px;
+    font: 600 clamp(28px, 4vw, 42px) / 1.2 Inter, sans-serif; /* taille/gras demandés */
+    color: #111;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+/* image sous le titre */
+.arb-figure {
+    margin: 0;
+}
+.arb-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px; /* optionnel, même DA que le reste */
+    outline: 1px solid #e9e9f2; /* optionnel */
+    background: #fff;
+}

@@ -210,6 +210,7 @@ header {
     justify-content: flex-start;
     gap: 16px;
     padding-left: 0%;
+    margin-bottom: 100px;
 }
 
 .etapes {
@@ -755,7 +756,7 @@ a.value:hover {
     padding: 0.8rem 1.2rem;
     background: #fff;
     border-top: 1px solid #ececf2;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
 .tm-meta li {
@@ -789,6 +790,7 @@ a.value:hover {
     color: var(--muted);
     font-size: 1.1rem;
     max-width: 62ch;
+    margin-bottom: 30px;
 }
 :root {
     --container: 1200px; /* largeur max de ta grille centrale */
@@ -2172,4 +2174,63 @@ main,
     border-radius: 14px; /* optionnel */
     outline: 1px solid #e9e9f2; /* optionnel */
     background: #fff;
+}
+/* ===== Prototype ===== */
+.proto-section {
+    max-width: 1280px;
+    margin: 0 auto 80px;
+    padding: 0 6%;
+    font-weight: 500; /* graisse par défaut */
+}
+
+.proto-title {
+    margin: 12px 0 24px;
+    font: 600 clamp(28px, 4vw, 42px) / 1.2 Inter, sans-serif;
+    color: #111;
+    text-align: left;
+}
+
+/* figure inchangée si tu veux garder le contour */
+.proto-figure {
+    margin: 0;
+}
+
+/* conteneur qui ROGNE */
+.proto-clip {
+    position: relative;
+    height: 600px; /* hauteur visible (à ajuster si besoin) */
+    overflow: hidden; /* ✅ cache ce qui dépasse */
+    border-radius: 14px; /* optionnel */
+    outline: 1px solid #e9e9f2;
+    background: #000;
+}
+
+/* la vidéo est plus grande et décalée vers le haut */
+.proto-video {
+    width: 100%;
+    height: auto;
+    min-height: 100%; /* s'assure de remplir la hauteur du clip */
+    object-fit: cover; /* remplit en rognant */
+    transform: translate(
+        10px,
+        -60px
+    ); /* X, Y */ /* ✅ décale vers le haut (ajuste la valeur) */
+}
+
+/* Responsive : un peu moins de décalage sur petits écrans si besoin */
+@media (max-width: 900px) {
+    .proto-clip {
+        height: 520px;
+    }
+    .proto-video {
+        transform: translateY(-60px);
+    }
+}
+@media (max-width: 600px) {
+    .proto-clip {
+        height: 360px;
+    }
+    .proto-video {
+        transform: translateY(-40px);
+    }
 }

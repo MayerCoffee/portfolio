@@ -2195,26 +2195,23 @@ main,
     margin: 0;
 }
 
-/* conteneur qui ROGNE */
+/* container unchanged */
 .proto-clip {
     position: relative;
-    height: 600px; /* hauteur visible (à ajuster si besoin) */
-    overflow: hidden; /* ✅ cache ce qui dépasse */
-    border-radius: 14px; /* optionnel */
+    height: 600px;
+    overflow: hidden;
+    border-radius: 14px;
     outline: 1px solid #e9e9f2;
     background: #000;
 }
 
-/* la vidéo est plus grande et décalée vers le haut */
+/* move LEFT (negative X), keep your vertical crop */
 .proto-video {
-    width: 100%;
+    width: 105%;
     height: auto;
-    min-height: 100%; /* s'assure de remplir la hauteur du clip */
-    object-fit: cover; /* remplit en rognant */
-    transform: translate(
-        10px,
-        -60px
-    ); /* X, Y */ /* ✅ décale vers le haut (ajuste la valeur) */
+    min-height: 100%;
+    object-fit: cover;
+    transform: translate(-30px, -100px); /* ⬅️ left 40px, up 100px */
 }
 
 /* Responsive : un peu moins de décalage sur petits écrans si besoin */
@@ -2232,5 +2229,90 @@ main,
     }
     .proto-video {
         transform: translateY(-40px);
+    }
+}
+.accueil-section {
+    max-width: 1280px;
+    margin: 0 auto 80px;
+    padding: 0 6%;
+}
+
+.accueil-title {
+    margin: 80px 0 24px;
+    font: 600 clamp(28px, 4vw, 42px) / 1.2 Inter, sans-serif;
+    font-weight: 500;
+    color: #111;
+    text-align: left;
+    margin-bottom: 30px *;
+}
+
+/* Grille d’images */
+.accueil-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    grid-template-areas:
+        "img1 img2"
+        "img3 img4"
+        ".    img5";
+    justify-content: start; /* aligne bien la grille à gauche */
+}
+.accueil-grid {
+    grid-template-areas:
+        "img1 img2"
+        "img3 img4"
+        "img5 ."; /* ✅ dernière image en colonne gauche */
+}
+
+/* Images : largeur max et alignées à gauche */
+.accueil-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* pas coupées */
+    margin: 0; /* pas d’espace parasite */
+    margin-bottom: 30px;
+}
+
+.accueil-grid h3 {
+    margin: 8px 0 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #111;
+}
+
+.accueil-grid p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+/* Assignation zones */
+.img1 {
+    grid-area: img1;
+}
+.img2 {
+    grid-area: img2;
+}
+.img3 {
+    grid-area: img3;
+}
+.img4 {
+    grid-area: img4;
+}
+.img5 {
+    grid-area: img5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .accueil-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "img1"
+            "img2"
+            "img3"
+            "img4"
+            "img5";
     }
 }

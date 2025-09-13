@@ -2397,3 +2397,9 @@ main,
         grid-template-columns: 1fr;
     }
 }
+.wk-quote {
+    font-style: italic;
+    margin: 1rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid #d9d2ff; /* optionnel, pour le style */
+}

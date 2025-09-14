@@ -2105,7 +2105,7 @@ main,
 
 .arb-title {
     margin: 12px 0 24px;
-    font: 600 clamp(28px, 4vw, 42px) / 1.2 Inter, sans-serif; /* taille/gras demandés */
+    font: 500 clamp(28px, 4vw, 42px) / 1.1 Inter, sans-serif; /* taille/gras demandés */
     color: #111;
     text-align: left;
     margin-bottom: 30px;
@@ -2185,7 +2185,7 @@ main,
 
 .proto-title {
     margin: 12px 0 24px;
-    font: 600 clamp(28px, 4vw, 42px) / 1.2 Inter, sans-serif;
+    font: 600 clamp(24px, 3vw, 36px) / 1.1 Inter, sans-serif;
     color: #111;
     text-align: left;
 }
@@ -2238,9 +2238,8 @@ main,
 }
 
 .accueil-title {
-    margin: 80px 0 24px;
-    font: 600 clamp(28px, 4vw, 42px) / 1.2 Inter, sans-serif;
-    font-weight: 500;
+    margin: 12px 0 24px;
+    font: 600 clamp(24px, 3vw, 36px) / 1.1 Inter, sans-serif; /* taille/gras demandés */
     color: #111;
     text-align: left;
     margin-bottom: 30px;
@@ -2325,7 +2324,7 @@ main,
 
 .more-projects__title {
     margin: 80px 0 24px;
-    font: 600 clamp(28px, 4vw, 42px) / 1.2 Inter, sans-serif; /* taille demandée */
+    font: 600 clamp(24px, 3vw, 36px) / 1.1 Inter, sans-serif; /* taille demandée */
     font-weight: 500; /* graisse demandée */
     color: #111;
     text-align: left;
@@ -2412,9 +2411,11 @@ main,
 }
 
 .avant-title {
-    font: 500 clamp(28px, 4vw, 42px) / 1.2 Inter, sans-serif;
+    font: 500 clamp(24px, 3vw, 36px) / 1.1 Inter, sans-serif;
     color: #111;
     margin-bottom: 30px;
+    text-align: left; /* <-- au lieu de centré */
+    margin-left: 0; /* facultatif : colle au bord */
 }
 
 .avant-img img {
@@ -2432,9 +2433,11 @@ main,
 }
 
 .apres-title {
-    font: 500 clamp(28px, 4vw, 42px) / 1.2 Inter, sans-serif;
+    font: 500 clamp(24px, 3vw, 36px) / 1.1 Inter, sans-serif;
     color: #111;
     margin-bottom: 30px;
+    text-align: left; /* <-- au lieu de centré */
+    margin-left: 0; /* facultatif : colle au bord */
 }
 
 .apres-img img {
@@ -2442,4 +2445,25 @@ main,
     height: auto;
     border-radius: 12px; /* optionnel pour un rendu harmonieux */
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* ombre légère */
+}
+.analyse {
+    max-width: 1280px;
+    margin: 0 auto 96px;
+    padding: 0 6%;
+    text-align: center;
+}
+
+.analyse-title {
+    font: 500 clamp(24px, 3vw, 36px) / 1.1 Inter, sans-serif;
+    color: #111;
+    margin-bottom: 30px;
+    text-align: left;
+    margin-left: 0;
+}
+.analyse-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px; /* arrondi léger */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* ombre discrète */
+    margin-bottom: 30px;
 }

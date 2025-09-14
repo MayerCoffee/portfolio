@@ -2403,3 +2403,43 @@ main,
     padding-left: 1rem;
     border-left: 3px solid #d9d2ff; /* optionnel, pour le style */
 }
+/* Section Avant */
+.avant {
+    max-width: 1280px;
+    margin: 0 auto 96px;
+    padding: 0 6%;
+    text-align: center;
+}
+
+.avant-title {
+    font: 500 clamp(28px, 4vw, 42px) / 1.2 Inter, sans-serif;
+    color: #111;
+    margin-bottom: 30px;
+}
+
+.avant-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px; /* optionnel pour un rendu plus doux */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* ombre légère */
+}
+/* Section Après */
+.apres {
+    max-width: 1280px;
+    margin: 0 auto 96px;
+    padding: 0 6%;
+    text-align: center;
+}
+
+.apres-title {
+    font: 500 clamp(28px, 4vw, 42px) / 1.2 Inter, sans-serif;
+    color: #111;
+    margin-bottom: 30px;
+}
+
+.apres-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px; /* optionnel pour un rendu harmonieux */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* ombre légère */
+}

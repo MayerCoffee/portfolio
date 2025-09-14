@@ -401,35 +401,52 @@
                     <tbody>
                         <tr>
                             <td class="row-label">User goals</td>
-                            <td>Comprendre le concept</td>
-                            <td>Trouver des modèles adaptés</td>
-                            <td>Personnaliser sa guitare</td>
-                            <td>Tester son rendu</td>
-                            <td>Acheter facilement</td>
-                            <td>Partager & revenir</td>
+                            <td>Accéder vite à une info fiable</td>
+                            <td>Trouver l’essentiel + sources</td>
+                            <td>Structurer sa lecture (sommaire, glossaire)</td>
+                            <td>Vérifier/approfondir avec médias et liens</td>
+                            <td>
+                                Enregistrer / citer correctement / lire
+                                confortablement
+                            </td>
+                            <td>Revenir facilement et suivre ses sujets</td>
                         </tr>
                         <tr>
                             <td class="row-label">Activities</td>
-                            <td>Découvre Tone Maker via réseaux</td>
-                            <td>Explore la galerie & templates</td>
-                            <td>Utilise le configurateur 3D</td>
-                            <td>Prévisualise & compare options</td>
-                            <td>Passe commande</td>
-                            <td>Partage ses créations</td>
+                            <td>Arrive depuis Google/école/actu</td>
+                            <td>Recherche interne, lit l’intro & infobox</td>
+                            <td>
+                                Ouvre sommaire flottant, active le glossaire
+                            </td>
+                            <td>
+                                Clique sur visuels, compare sections/langues
+                            </td>
+                            <td>
+                                Ajoute en favoris, copie la citation, mode
+                                lecture
+                            </td>
+                            <td>
+                                Consulte l’historique, articles liés, petites
+                                contributions
+                            </td>
                         </tr>
                         <tr>
                             <td class="row-label">Touchpoints & channels</td>
-                            <td>Instagram, TikTok</td>
-                            <td>Site Tone Maker</td>
-                            <td>UI configurateur</td>
-                            <td>Preview temps réel</td>
-                            <td>Checkout simple</td>
-                            <td>Galerie + communauté</td>
+                            <td>Google, profs, réseaux</td>
+                            <td>Page article (intro, infobox)</td>
+                            <td>Sommaire sticky, glossaire contextuel</td>
+                            <td>
+                                Médias interactifs, liens internes, versions
+                            </td>
+                            <td>
+                                Outil de citation, compte, mode sombre/lecture
+                            </td>
+                            <td>Historique, “à lire plus tard”, suggestions</td>
                         </tr>
-                        <!-- Emotions (remplacer toute la ligne) -->
+
+                        <!-- Emotions -->
                         <tr class="row-emotions">
                             <td class="row-label">Emotions</td>
-                            <!-- on fusionne les 6 colonnes d'étapes -->
                             <td colspan="6" class="emotion-cell">
                                 <div
                                     class="emotion-graph"
@@ -439,36 +456,86 @@
                                     <svg
                                         viewBox="0 0 1000 160"
                                         preserveAspectRatio="none"
-                                    ></svg>
+                                    >
+                                        <!-- courbe: démarre neutre, monte (recherche/lecture), petite baisse (liens nombreux), remonte fort (citation/retour) -->
+                                        <path
+                                            d="M0,100 
+                         C100,95 100,95 200,90 
+                         S400,70 400,70 
+                         S600,85 600,85 
+                         S800,75 800,75 
+                         S900,65 1000,60"
+                                            fill="none"
+                                            stroke="#7c5cff"
+                                            stroke-width="4"
+                                            stroke-linecap="round"
+                                        />
+                                    </svg>
                                     <div
                                         class="emotion-emojis"
                                         aria-hidden="true"
-                                    ></div>
+                                    >
+                                        <!-- positions émoticônes par étape (6 points) -->
+                                        <span
+                                            class="emoji"
+                                            style="left: 0%; top: 100%"
+                                            >😐</span
+                                        >
+                                        <span
+                                            class="emoji"
+                                            style="left: 20%; top: 90%"
+                                            >🙂</span
+                                        >
+                                        <span
+                                            class="emoji"
+                                            style="left: 40%; top: 70%"
+                                            >🤓</span
+                                        >
+                                        <span
+                                            class="emoji"
+                                            style="left: 60%; top: 85%"
+                                            >😅</span
+                                        >
+                                        <span
+                                            class="emoji"
+                                            style="left: 80%; top: 75%"
+                                            >😊</span
+                                        >
+                                        <span
+                                            class="emoji"
+                                            style="left: 100%; top: 60%"
+                                            >😍</span
+                                        >
+                                    </div>
                                 </div>
                             </td>
                         </tr>
+
                         <tr>
                             <td class="row-label">Pain points</td>
-                            <td>Jargon technique</td>
-                            <td>Explications limitées</td>
-                            <td>Trop d’options</td>
-                            <td>Prévisualisation pas assez réaliste</td>
-                            <td>Friction paiement</td>
-                            <td>Peu de suivi</td>
+                            <td>Jargon/fiabilité perçue floue</td>
+                            <td>Trop d’infos, hiérarchie faible</td>
+                            <td>Sans sommaire, on se perd</td>
+                            <td>Médias peu mis en valeur, liens distrayants</td>
+                            <td>Citation pas évidente, lisibilité mobile</td>
+                            <td>Peu d’incitations à revenir, suivi limité</td>
                         </tr>
                         <tr>
                             <td class="row-label">Improvement opportunities</td>
-                            <td>Glossaire + micro-copies</td>
-                            <td>Tutos vidéo</td>
-                            <td>Filtres & catégories claires</td>
-                            <td>Preview AR/VR</td>
-                            <td>Checkout simplifié</td>
-                            <td>Programme communauté</td>
+                            <td>Badges de qualité + micro-copies</td>
+                            <td>Résumé clair + infobox enrichie</td>
+                            <td>Sommaire sticky + glossaire contextuel</td>
+                            <td>Visuels interactifs + micro-récap sticky</td>
+                            <td>
+                                Citation en 1 clic + mode lecture responsive
+                            </td>
+                            <td>Historique perso + suggestions & favoris</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
+
         <section class="bm-section" id="benchmark">
             <h2 class="bm-title">Benchmark</h2>
 

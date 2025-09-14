@@ -2467,3 +2467,51 @@ main,
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* ombre discrète */
     margin-bottom: 30px;
 }
+.scroll-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff),
+        linear-gradient(135deg, #9b5de5, #f15bb5, #fee440, #00bbf9, #00f5d4);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 999; /* reste toujours visible */
+    text-decoration: none;
+}
+
+.scroll-btn span {
+    font-size: 22px;
+    color: #333;
+}
+
+.scroll-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+a.btn {
+    text-decoration: none;
+}
+.btn {
+    border: 1.5px solid #b99cff;
+    background: transparent;
+    border-radius: 30px;
+    padding: 10px 24px; /* réduit un peu l’espace intérieur */
+    font-family: inherit;
+    font-size: 0.85rem; /* texte plus petit */
+    color: #222;
+    cursor: pointer;
+    margin: 0 8px;
+    transition: border-color 0.2s, background 0.2s;
+    text-decoration: none; /* enlève le souligné pour <a> */
+}

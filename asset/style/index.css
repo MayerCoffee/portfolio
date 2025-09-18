@@ -2591,3 +2591,54 @@ a.btn {
         margin: 0 0 14px;
     }
 }
+/* Scope commun (id de la 1re section + classe .spree pour les autres) */
+#accueil-spree .accueil-grid,
+.accueil-section.spree .accueil-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 28px;
+}
+
+/* Images : captures “mobile” plus petites et propres */
+#accueil-spree .accueil-grid img,
+.accueil-section.spree .accueil-grid img {
+    width: 80%;
+    max-width: 260px;
+    object-fit: contain;
+    display: block;
+    margin: 0 0 12px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 35px;
+    margin-top: 35px;
+}
+
+/* Titres et paragraphes alignés comme .accueil-title */
+#accueil-spree .accueil-grid h3,
+.accueil-section.spree .accueil-grid h3 {
+    margin: 4px 0 4px;
+    font: 600 clamp(18px, 2vw, 22px) / 1.2 Inter, sans-serif;
+    color: #111;
+    text-align: left;
+}
+
+#accueil-spree .accueil-grid p,
+.accueil-section.spree .accueil-grid p {
+    margin: 0;
+    font: 400 15px/1.5 Inter, sans-serif;
+    color: #6b7280;
+    text-align: left;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    #accueil-spree .accueil-grid,
+    .accueil-section.spree .accueil-grid {
+        grid-template-columns: 1fr;
+    }
+    #accueil-spree .accueil-grid img,
+    .accueil-section.spree .accueil-grid img {
+        width: 100%;
+        max-width: 360px;
+    }
+}

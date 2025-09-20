@@ -205,12 +205,37 @@ header {
 .hero :hover h1 {
     color: #2d2d2d;
 }
-.choix {
-    display: flex;
-    justify-content: flex-start;
-    gap: 16px;
-    padding-left: 0%;
-    margin-bottom: 100px;
+/* === ALIGNEMENT STRICT : H1 + lead + boutons sur la même colonne === */
+.tm-title {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-auto-rows: min-content;
+    row-gap: 16px;
+    justify-items: start; /* bord gauche commun */
+}
+
+.tm-title > * {
+    margin: 0 !important; /* on neutralise tout décalage */
+    padding: 0 !important;
+}
+
+/* Bloc des deux boutons */
+.tm-title > .choix {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 12px;
+    justify-content: start;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    margin-bottom: 0 !important;
+    margin-top: 50px;
+}
+
+.tm-title > .choix .btn {
+    margin: 0 !important; /* aucun décalage résiduel */
+    margin-top: 14px !important; /* ajuste: 16, 24, 32… */
 }
 
 .etapes {
@@ -711,7 +736,7 @@ a.value:hover {
     --muted: #949494;
     --line: #000000;
     --card: #f5f5f8;
-    --grad: linear-gradient(90deg, #000000, #3bc8d7);
+
     --shadow: 0 10px 36px rgba(0, 0, 0, 0.06);
     --r: 18px;
     --xxl: 6rem;
@@ -783,7 +808,6 @@ a.value:hover {
     background: var(--grad);
     -webkit-background-clip: text; /* Safari/Chrome */
     background-clip: text; /* ✅ Standard */
-    -webkit-text-fill-color: transparent;
 }
 
 .tm-title .lead {
@@ -803,12 +827,14 @@ a.value:hover {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.2rem;
     margin-bottom: var(--xl);
+    margin-top: 90px;
 }
 @media (max-width: 1000px) {
     .tm-triptych {
         grid-template-columns: 1fr;
     }
 }
+
 .trip-card {
     background: #fff;
     border: 1px solid #ececf2;
@@ -2467,54 +2493,82 @@ main,
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* ombre discrète */
     margin-bottom: 30px;
 }
+/* === Bouton "Revenir en haut" : version pill avec texte === */
 .scroll-btn {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+
+    /* on passe d'un cercle fixe à une pastille flexible */
+    width: auto; /* laisse la place au texte */
+    height: auto;
+    min-height: 56px;
+    padding: 10px 16px;
+    border-radius: 9999px;
+
     background: #fff;
     border: 2px solid transparent;
     background-image: linear-gradient(#fff, #fff),
         linear-gradient(135deg, #9b5de5, #f15bb5, #fee440, #00bbf9, #00f5d4);
     background-origin: border-box;
-    background-clip: content-box, border-box;
-    display: flex;
+    border-width: 1.5px; /* ajuste: 1px, 1.5px, 2px */
+    background-clip: padding-box, border-box; /* <- clé pour amincir l'anneau */
+    padding: 8px 14px; /* un peu moins de padding = plus compact */
+    min-height: 48px;
+
+    display: inline-flex; /* icône + libellé sur une ligne */
     align-items: center;
     justify-content: center;
+    gap: 10px;
+
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    z-index: 999; /* reste toujours visible */
     text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 999;
 }
 
-.scroll-btn span {
-    font-size: 22px;
+/* Icône (la flèche) = 1er span */
+.scroll-btn span:first-child {
+    font-size: 20px;
+    line-height: 1;
     color: #333;
 }
 
+/* Libellé "Revenir en haut" */
+.scroll-btn .label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap; /* évite le retour à la ligne */
+}
+
 .scroll-btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.08);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
-a.btn {
-    text-decoration: none;
+
+/* Accessibilité focus clavier */
+.scroll-btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(155, 93, 229, 0.35),
+        0 6px 16px rgba(0, 0, 0, 0.25);
 }
-.btn {
-    border: 1.5px solid #b99cff;
-    background: transparent;
-    border-radius: 30px;
-    padding: 10px 24px; /* réduit un peu l’espace intérieur */
-    font-family: inherit;
-    font-size: 0.85rem; /* texte plus petit */
-    color: #222;
-    cursor: pointer;
-    margin: 0 8px;
-    transition: border-color 0.2s, background 0.2s;
-    text-decoration: none; /* enlève le souligné pour <a> */
+
+/* Mobile : on redevient un bouton rond, on cache le texte */
+@media (max-width: 640px) {
+    .scroll-btn {
+        width: 56px;
+        height: 56px;
+        padding: 0;
+        border-radius: 50%;
+        gap: 0;
+    }
+    .scroll-btn .label {
+        display: none;
+    }
 }
+
 /* ====== Scope Spree UNIQUEMENT ====== */
 #accueil-spree .accueil-grid {
     /* grille adaptée aux captures “téléphone” (plus étroites/verticales) */

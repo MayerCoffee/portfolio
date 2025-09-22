@@ -84,5 +84,40 @@
                 <button class="form-submit-btn" type="submit">Submit</button>
             </form>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script>
+            (function () {
+                // Mon Public Key
+                emailjs.init("9_hLPk2tIq7bhWke0");
+            })();
+
+            function sendMail(event) {
+                event.preventDefault();
+                emailjs
+                    .sendForm(
+                        "service_zl997jb",
+                        "template_17oxdek",
+                        event.target
+                    )
+                    .then(() => alert("Message envoyé avec succès 🎉"))
+                    .catch((err) => alert("Erreur : " + JSON.stringify(err)));
+            }
+        </script>
+
+        <form onsubmit="sendMail(event)">
+            <input type="text" name="name" placeholder="Votre nom" required />
+            <input
+                type="email"
+                name="email"
+                placeholder="Votre email"
+                required
+            />
+            <textarea
+                name="message"
+                placeholder="Votre message"
+                required
+            ></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
     </body>
 </html>

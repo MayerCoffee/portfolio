@@ -10,6 +10,19 @@
             rel="stylesheet"
         />
         <link rel="icon" type="image/png" href="asset/Logo/logo.png" />
+
+        <style>
+            /* Correction padding des champs */
+            .form input,
+            .form textarea {
+                padding: 10px 14px; /* espace interne (haut/bas, gauche/droite) */
+                box-sizing: border-box;
+            }
+
+            .form textarea {
+                padding-top: 12px; /* un peu plus en haut pour le confort */
+            }
+        </style>
     </head>
     <body>
         <!-- Header -->
@@ -19,10 +32,12 @@
             </a>
             <button class="btn-contact">Contact</button>
         </header>
+
         <div class="image-round">
             <img src="asset/IMG/photo.jpg" alt="Portrait" />
         </div>
-        <!-- From Uiverse.io by elisapi -->
+
+        <!-- Réseaux sociaux -->
         <div class="card">
             <a class="socialContainer containerOne" href="#">
                 <svg viewBox="0 0 16 16" class="socialSvg instagramSvg">
@@ -31,13 +46,9 @@
                     ></path>
                 </svg>
             </a>
-
             <a class="socialContainer containerTwo" href="#">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
                     viewBox="0 0 16 16"
                     class="socialSvg twitterSvg"
                 >
@@ -46,7 +57,6 @@
                     />
                 </svg>
             </a>
-
             <a class="socialContainer containerThree" href="#">
                 <svg viewBox="0 0 448 512" class="socialSvg linkdinSvg">
                     <path
@@ -54,7 +64,6 @@
                     ></path>
                 </svg>
             </a>
-
             <a class="socialContainer containerFour" href="#">
                 <svg viewBox="0 0 16 16" class="socialSvg whatsappSvg">
                     <path
@@ -64,60 +73,33 @@
             </a>
         </div>
 
+        <!-- Formulaire -->
         <div class="form-container">
-            <form class="form">
+            <form
+                class="form"
+                action="https://formspree.io/f/movkanlb"
+                method="POST"
+            >
                 <div class="form-group">
-                    <label for="email">Votre Email </label>
-                    <input type="text" id="email" name="email" required="" />
+                    <label for="name">Votre nom</label>
+                    <input type="text" id="name" name="name" required />
                 </div>
                 <div class="form-group">
-                    <label for="textarea">Votre message</label>
+                    <label for="email">Votre Email</label>
+                    <input type="email" id="email" name="_replyto" required />
+                </div>
+                <div class="form-group">
+                    <label for="message">Votre message</label>
                     <textarea
-                        name="textarea"
-                        id="textarea"
+                        name="message"
+                        id="message"
                         rows="10"
                         cols="50"
-                        required=""
-                    >
-                    </textarea>
+                        required
+                    ></textarea>
                 </div>
                 <button class="form-submit-btn" type="submit">Submit</button>
             </form>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-        <script>
-            (function () {
-                // Mon Public Key
-                emailjs.init("9_hLPk2tIq7bhWke0");
-            })();
-
-            function sendMail(event) {
-                event.preventDefault();
-                emailjs
-                    .sendForm(
-                        "service_zl997jb",
-                        "template_17oxdek",
-                        event.target
-                    )
-                    .then(() => alert("Message envoyé avec succès 🎉"))
-                    .catch((err) => alert("Erreur : " + JSON.stringify(err)));
-            }
-        </script>
-
-        <form onsubmit="sendMail(event)">
-            <input type="text" name="name" placeholder="Votre nom" required />
-            <input
-                type="email"
-                name="email"
-                placeholder="Votre email"
-                required
-            />
-            <textarea
-                name="message"
-                placeholder="Votre message"
-                required
-            ></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
     </body>
 </html>

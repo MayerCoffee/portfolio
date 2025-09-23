@@ -263,6 +263,15 @@
                 <button class="tmc-btn tmc-next" aria-label="Suivant">›</button>
             </div>
         </section>
+        <!-- Indicateurs -->
+        <div class="tmc-indicators">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
 
         <section class="persona-section">
             <h2 class="persona-title">Personaes</h2>
@@ -347,6 +356,12 @@
                 </div>
             </div>
         </section>
+        <!-- Indicateurs -->
+        <div class="persona-indicators">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
         <section class="journey">
             <h2 class="journey-title">User Journey</h2>
 
@@ -697,7 +712,18 @@
                 </a>
             </div>
         </section>
-
+        <footer class="footer">
+            <div class="footer-container">
+                <p class="footer-text">
+                    © 2025 — Portfolio UI/UX · Réalisé avec passion ✦
+                </p>
+                <nav class="footer-links">
+                    <a href="index.html">Accueil</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                </nav>
+            </div>
+        </footer>
         <script>
             (function () {
                 const viewport = document.querySelector(".tmc-viewport"); // c'est LUI qui scrolle
@@ -811,6 +837,77 @@
 
                 setEmojis();
                 window.addEventListener("resize", setEmojis);
+            })();
+        </script>
+        <script>
+            (function () {
+                const viewport = document.querySelector(".tmc-viewport");
+                const dots = document.querySelectorAll(".tmc-indicators .dot");
+
+                if (!viewport || dots.length === 0) return;
+
+                // Mise à jour de l'état actif des points
+                const updateDots = () => {
+                    const index = Math.round(
+                        viewport.scrollLeft / viewport.clientWidth
+                    );
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle("active", i === index);
+                    });
+                };
+
+                // Navigation au clic sur un point
+                dots.forEach((dot, i) => {
+                    dot.addEventListener("click", () => {
+                        viewport.scrollTo({
+                            left: i * viewport.clientWidth,
+                            behavior: "smooth",
+                        });
+                    });
+                });
+
+                viewport.addEventListener("scroll", () =>
+                    requestAnimationFrame(updateDots)
+                );
+                window.addEventListener("resize", updateDots);
+
+                updateDots();
+            })();
+        </script>
+        <script>
+            (function () {
+                const viewport = document.querySelector(".persona-viewport");
+                const dots = document.querySelectorAll(
+                    ".persona-indicators .dot"
+                );
+
+                if (!viewport || dots.length === 0) return;
+
+                const updateDots = () => {
+                    const index = Math.round(
+                        viewport.scrollLeft / viewport.clientWidth
+                    );
+                    dots.forEach((dot, i) =>
+                        dot.classList.toggle("active", i === index)
+                    );
+                };
+
+                dots.forEach((dot, i) => {
+                    dot.addEventListener("click", () => {
+                        viewport.scrollTo({
+                            left: i * viewport.clientWidth,
+                            behavior: "smooth",
+                        });
+                    });
+                });
+
+                viewport.addEventListener("scroll", () =>
+                    requestAnimationFrame(updateDots)
+                );
+
+                window.addEventListener("resize", updateDots);
+
+                updateDots();
             })();
         </script>
     </body>

@@ -288,6 +288,15 @@
                         </article>
                     </div>
                 </div>
+                <!-- Indicateurs -->
+                <div class="tmc-indicators">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
 
                 <button class="tmc-btn tmc-next" aria-label="Suivant">›</button>
             </div>
@@ -396,6 +405,13 @@
                 </div>
             </div>
         </section>
+        <!-- Indicateurs -->
+        <div class="persona-indicators">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
         <section class="journey">
             <h2 class="journey-title">User Journey</h2>
 
@@ -415,42 +431,68 @@
                     <tbody>
                         <tr>
                             <td class="row-label">User goals</td>
-                            <td>Découvrir la nouveauté sociale de Netflix</td>
-                            <td>Explorer les profils amis & recommandations</td>
-                            <td>Partager avis et notations</td>
-                            <td>
+                            <td data-label="Découverte">
+                                Découvrir la nouveauté sociale de Netflix
+                            </td>
+                            <td data-label="Exploration">
+                                Explorer les profils amis & recommandations
+                            </td>
+                            <td data-label="Interaction sociale">
+                                Partager avis et notations
+                            </td>
+                            <td data-label="Visionnage partagé">
                                 Regarder un film/série ensemble en salle privée
                             </td>
-                            <td>Choisir une offre adaptée</td>
-                            <td>Revenir, inviter et partager plus</td>
+                            <td data-label="Achat / Abonnement">
+                                Choisir une offre adaptée
+                            </td>
+                            <td data-label="Fidélisation">
+                                Revenir, inviter et partager plus
+                            </td>
                         </tr>
                         <tr>
                             <td class="row-label">Activities</td>
-                            <td>
+                            <td data-label="Découverte">
                                 Voit la fonctionnalité via réseaux sociaux ou
                                 bannière Netflix
                             </td>
-                            <td>
+                            <td data-label="Exploration">
                                 Parcourt le profil de ses amis & suggestions
                             </td>
-                            <td>Note un film, commente, compare ses tops</td>
-                            <td>
+                            <td data-label="Interaction sociale">
+                                Note un film, commente, compare ses tops
+                            </td>
+                            <td data-label="Visionnage partagé">
                                 Crée une salle, invite des amis, utilise le chat
                             </td>
-                            <td>Souscrit à une offre (ex : multi-profils)</td>
-                            <td>
+                            <td data-label="Achat / Abonnement">
+                                Souscrit à une offre (ex : multi-profils)
+                            </td>
+                            <td data-label="Fidélisation">
                                 Partage ses recommandations & revient pour
                                 co-visionnage
                             </td>
                         </tr>
                         <tr>
                             <td class="row-label">Touchpoints & channels</td>
-                            <td>Instagram, TikTok, App Netflix</td>
-                            <td>Interface profil & suggestions entre amis</td>
-                            <td>Notes, commentaires, top 3 films</td>
-                            <td>Salle privée + chat vidéo/texte</td>
-                            <td>Checkout simplifié sur Netflix</td>
-                            <td>Galerie partagée, notifications entre amis</td>
+                            <td data-label="Découverte">
+                                Instagram, TikTok, App Netflix
+                            </td>
+                            <td data-label="Exploration">
+                                Interface profil & suggestions entre amis
+                            </td>
+                            <td data-label="Interaction sociale">
+                                Notes, commentaires, top 3 films
+                            </td>
+                            <td data-label="Visionnage partagé">
+                                Salle privée + chat vidéo/texte
+                            </td>
+                            <td data-label="Achat / Abonnement">
+                                Checkout simplifié sur Netflix
+                            </td>
+                            <td data-label="Fidélisation">
+                                Galerie partagée, notifications entre amis
+                            </td>
                         </tr>
                         <!-- Emotions -->
                         <tr class="row-emotions">
@@ -474,23 +516,45 @@
                         </tr>
                         <tr>
                             <td class="row-label">Pain points</td>
-                            <td>
+                            <td data-label="Découverte">
                                 Manque de clarté sur la nouvelle fonctionnalité
                             </td>
-                            <td>Trop de contenus → difficulté à choisir</td>
-                            <td>Absence d’historique clair des amis</td>
-                            <td>Problèmes techniques (synchro, lag)</td>
-                            <td>Prix perçu comme élevé</td>
-                            <td>Peu d’incitations à revenir si seul</td>
+                            <td data-label="Exploration">
+                                Trop de contenus → difficulté à choisir
+                            </td>
+                            <td data-label="Interaction sociale">
+                                Absence d’historique clair des amis
+                            </td>
+                            <td data-label="Visionnage partagé">
+                                Problèmes techniques (synchro, lag)
+                            </td>
+                            <td data-label="Achat / Abonnement">
+                                Prix perçu comme élevé
+                            </td>
+                            <td data-label="Fidélisation">
+                                Peu d’incitations à revenir si seul
+                            </td>
                         </tr>
                         <tr>
                             <td class="row-label">Improvement opportunities</td>
-                            <td>Campagne onboarding claire</td>
-                            <td>Filtres par goûts communs avec amis</td>
-                            <td>Timeline sociale visible</td>
-                            <td>Améliorer stabilité + réactions emojis live</td>
-                            <td>Offre adaptée au visionnage groupé</td>
-                            <td>Programme communauté / récompenses sociales</td>
+                            <td data-label="Découverte">
+                                Campagne onboarding claire
+                            </td>
+                            <td data-label="Exploration">
+                                Filtres par goûts communs avec amis
+                            </td>
+                            <td data-label="Interaction sociale">
+                                Timeline sociale visible
+                            </td>
+                            <td data-label="Visionnage partagé">
+                                Améliorer stabilité + réactions emojis live
+                            </td>
+                            <td data-label="Achat / Abonnement">
+                                Offre adaptée au visionnage groupé
+                            </td>
+                            <td data-label="Fidélisation">
+                                Programme communauté / récompenses sociales
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -817,6 +881,18 @@
                 </a>
             </div>
         </section>
+        <footer class="footer">
+            <div class="footer-container">
+                <p class="footer-text">
+                    © 2025 — Portfolio UI/UX · Réalisé avec passion ✦
+                </p>
+                <nav class="footer-links">
+                    <a href="index.html">Accueil</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                </nav>
+            </div>
+        </footer>
 
         <script>
             (function () {
@@ -931,6 +1007,77 @@
 
                 setEmojis();
                 window.addEventListener("resize", setEmojis);
+            })();
+        </script>
+        <script>
+            (function () {
+                const viewport = document.querySelector(".tmc-viewport");
+                const dots = document.querySelectorAll(".tmc-indicators .dot");
+
+                if (!viewport || dots.length === 0) return;
+
+                // Mise à jour de l'état actif des points
+                const updateDots = () => {
+                    const index = Math.round(
+                        viewport.scrollLeft / viewport.clientWidth
+                    );
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle("active", i === index);
+                    });
+                };
+
+                // Navigation au clic sur un point
+                dots.forEach((dot, i) => {
+                    dot.addEventListener("click", () => {
+                        viewport.scrollTo({
+                            left: i * viewport.clientWidth,
+                            behavior: "smooth",
+                        });
+                    });
+                });
+
+                viewport.addEventListener("scroll", () =>
+                    requestAnimationFrame(updateDots)
+                );
+                window.addEventListener("resize", updateDots);
+
+                updateDots();
+            })();
+        </script>
+        <script>
+            (function () {
+                const viewport = document.querySelector(".persona-viewport");
+                const dots = document.querySelectorAll(
+                    ".persona-indicators .dot"
+                );
+
+                if (!viewport || dots.length === 0) return;
+
+                const updateDots = () => {
+                    const index = Math.round(
+                        viewport.scrollLeft / viewport.clientWidth
+                    );
+                    dots.forEach((dot, i) =>
+                        dot.classList.toggle("active", i === index)
+                    );
+                };
+
+                dots.forEach((dot, i) => {
+                    dot.addEventListener("click", () => {
+                        viewport.scrollTo({
+                            left: i * viewport.clientWidth,
+                            behavior: "smooth",
+                        });
+                    });
+                });
+
+                viewport.addEventListener("scroll", () =>
+                    requestAnimationFrame(updateDots)
+                );
+
+                window.addEventListener("resize", updateDots);
+
+                updateDots();
             })();
         </script>
     </body>

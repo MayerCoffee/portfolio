@@ -2738,3 +2738,1045 @@ main,
     border-radius: 10px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
+/* ====== Footer ====== */
+.footer {
+    background: #f9f9fb; /* proche du blanc cassé pour rester doux */
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-text {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 16px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.footer-links a {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #444;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #6a00f4; /* ton violet accent de ta DA */
+}
+/* ======= Responsive INDEX ======= */
+
+/* 1. Etapes : passer de 3 colonnes → 1 colonne en mobile */
+@media (max-width: 900px) {
+    .grid-etapes {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .etape {
+        align-items: center;
+        text-align: center;
+    }
+    .etape h3,
+    .etape p {
+        text-align: center;
+    }
+}
+
+/* 2. Section projets-tableau */
+.projet-text p {
+    margin: 0 0 20px 0; /* ✅ réduit l’énorme marge */
+}
+
+@media (max-width: 900px) {
+    .projets-tableau table,
+    .projets-tableau tr,
+    .projets-tableau td {
+        display: block;
+        width: 100%;
+    }
+
+    .projets-tableau tr {
+        margin-bottom: 40px; /* espace entre les projets */
+        border-bottom: 1px solid #eee;
+    }
+
+    .projet-image {
+        height: auto;
+    }
+
+    .projet-image img {
+        height: auto;
+        max-height: 280px;
+        object-fit: contain;
+    }
+}
+
+/* 3. Hero (titre + boutons) */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: clamp(1.8rem, 6vw, 2.4rem);
+        color: #333; /* plus lisible que #dbdbdb */
+        text-align: center;
+    }
+    .choix {
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+/* 4. Header */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 16px;
+        gap: 12px;
+    }
+    .btn-contact {
+        position: static; /* ✅ supprime le absolute */
+        transform: none;
+    }
+}
+/* ===== Responsive Portfolio ===== */
+
+/* Projets-tableau : corriger le tableau sur mobile */
+@media (max-width: 900px) {
+    .projets-tableau table,
+    .projets-tableau tr,
+    .projets-tableau td {
+        display: block;
+        width: 100% !important;
+    }
+
+    .projets-tableau tr {
+        margin-bottom: 40px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 20px;
+    }
+
+    .projet-text {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .projet-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .projet-text span {
+        display: block;
+        margin-top: 4px;
+        font-size: 0.9rem;
+        color: #777;
+    }
+
+    .projet-text p {
+        margin: 12px 0 20px;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .projet-image {
+        text-align: center;
+    }
+
+    .projet-image img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .button {
+        margin: 0 auto;
+        display: inline-block;
+    }
+}
+
+/* Étapes : passer de grille 3 colonnes à une seule */
+@media (max-width: 900px) {
+    .grid-etapes {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .etape {
+        text-align: center;
+    }
+}
+
+/* Hero : titre lisible en petit écran */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: clamp(1.6rem, 6vw, 2.4rem);
+        text-align: center;
+        line-height: 1.3;
+    }
+
+    .choix {
+        justify-content: center;
+        margin-top: 16px;
+    }
+}
+
+/* Header : bouton contact bien placé */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px;
+        height: auto;
+    }
+
+    .btn-contact {
+        position: static;
+        transform: none;
+    }
+}
+/* === RESPONSIVE MOBILE === */
+
+/* Étapes : 3 colonnes → 1 colonne */
+@media (max-width: 900px) {
+    .grid-etapes {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .etape {
+        align-items: center;
+        text-align: center;
+    }
+    .etape h3,
+    .etape p {
+        text-align: center;
+    }
+}
+
+/* Section Projets : table → pile verticale */
+@media (max-width: 900px) {
+    .projets-tableau table,
+    .projets-tableau tr,
+    .projets-tableau td {
+        display: block;
+        width: 100% !important;
+    }
+
+    .projets-tableau tr {
+        margin-bottom: 40px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 20px;
+    }
+
+    .projet-text {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .projet-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .projet-text span {
+        display: block;
+        margin-top: 4px;
+        font-size: 0.9rem;
+        color: #777;
+    }
+
+    .projet-text p {
+        margin: 10px 0 18px;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .projet-image {
+        height: auto;
+        text-align: center;
+    }
+
+    .projet-image img {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .button {
+        margin: 0 auto;
+        display: inline-block;
+    }
+}
+
+/* Hero (h1 + boutons) */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: clamp(1.6rem, 6vw, 2.3rem);
+        text-align: center;
+        line-height: 1.3;
+        color: #333; /* plus lisible */
+    }
+    .choix {
+        justify-content: center;
+        margin-top: 18px;
+    }
+    .choix .btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Header */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px;
+        height: auto;
+    }
+    .btn-contact {
+        position: static;
+        transform: none;
+        font-size: 0.85rem;
+        padding: 10px 24px;
+    }
+    .logo {
+        height: 48px;
+        margin: 12px auto;
+    }
+}
+
+/* Accueil Grid → 1 colonne */
+@media (max-width: 900px) {
+    .accueil-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "img1"
+            "img2"
+            "img3"
+            "img4"
+            "img5";
+    }
+    .accueil-grid img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* More projects : 3 → 2 → 1 */
+@media (max-width: 980px) {
+    .more-projects__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 620px) {
+    .more-projects__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Formulaire contact */
+@media (max-width: 600px) {
+    .form-container {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+/* Footer */
+@media (max-width: 600px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+/* Responsive : texte sous image et aligné à gauche */
+@media (max-width: 900px) {
+    .projets-tableau tr {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* contenu aligné à gauche */
+    }
+
+    .projet-text {
+        text-align: left; /* justification gauche */
+        margin-top: 12px;
+    }
+
+    .projet-text p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin: 8px 0 16px;
+        word-break: normal; /* empêche la coupure brutale */
+        overflow-wrap: break-word; /* coupe proprement si besoin */
+    }
+
+    .projet-image {
+        order: -1; /* image avant le texte */
+        margin-bottom: 12px;
+        text-align: center;
+    }
+}
+@media (max-width: 900px) {
+    .projet-text {
+        text-align: left;
+        margin: 0;
+        padding: 0 8px;
+    }
+
+    .projet-text h3 {
+        font-size: 1.1rem;
+        margin: 0 0 4px 0;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    .projet-text h3 span {
+        display: block;
+        margin: 2px 0 6px 0; /* mêmes retraits que le paragraphe */
+        font-size: 0.85rem;
+        font-weight: 400;
+        color: #888;
+        text-align: left; /* force l’alignement */
+    }
+
+    .projet-text p {
+        font-size: 0.85rem;
+        line-height: 1.45;
+        margin: 0 0 14px 0;
+        color: #555;
+    }
+}
+@media (max-width: 900px) {
+    .button {
+        width: 44px;
+        height: 44px;
+        padding: 8px;
+    }
+
+    .button::before {
+        width: 52px;
+        height: 44px;
+        left: -4px;
+        top: -2px;
+    }
+
+    .button img {
+        width: 18px;
+        height: 18px;
+    }
+}
+@media (max-width: 900px) {
+    /* Image plein écran */
+    .projet-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 14px auto; /* espace dessous */
+    }
+
+    /* Texte plus aéré */
+    .projet-text h3 {
+        font-size: 1.1rem;
+        margin: 0 0 4px 0;
+    }
+
+    .projet-text h3 span {
+        display: block;
+        margin: 2px 0 12px 0; /* plus d’espace sous le sous-titre */
+        font-size: 0.85rem;
+        color: #888;
+    }
+
+    .projet-text p {
+        font-size: 0.85rem;
+        line-height: 1.45;
+        margin: 0 0 14px 0;
+    }
+
+    /* Bouton plus petit */
+    .button {
+        width: 36px;
+        height: 36px;
+        padding: 6px;
+    }
+
+    .button::before {
+        width: 42px;
+        height: 42px;
+        left: -3px;
+        top: -3px;
+    }
+
+    .button img {
+        width: 14px;
+        height: 14px;
+    }
+}
+@media (max-width: 900px) {
+    .projets-tableau tr {
+        border: none !important; /* supprime les traits */
+        padding-bottom: 0; /* évite espace fantôme */
+        margin-bottom: 24px; /* garde un peu d’air entre les blocs */
+    }
+
+    .projets-tableau td {
+        border: none !important;
+    }
+}
+@media (max-width: 900px) {
+    /* Logo plus grand */
+    .logo {
+        height: 64px; /* avant ~48px */
+        margin: 16px auto;
+    }
+
+    @media (max-width: 900px) {
+        /* Titre principal encore plus grand */
+        .hero h1 {
+            font-size: clamp(2rem, 8vw, 2.8rem); /* avant max 2.5rem */
+            line-height: 1.25;
+            margin-bottom: 14px;
+        }
+    }
+
+    /* Sous-titre "Étape vers le succès" réduit */
+    .hero h2,
+    .section-title, /* selon ton HTML */
+    .arb-title {
+        font-size: clamp(1.2rem, 5vw, 1.6rem);
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 900px) {
+    /* Grille 2 colonnes */
+    .grid-etapes {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    /* Icônes + titres centrés */
+    .etape {
+        text-align: center;
+    }
+
+    .etape h3 {
+        font-size: 0.95rem;
+        margin-top: 8px;
+    }
+
+    /* On masque les sous-titres */
+    .etape p {
+        display: none;
+    }
+}
+@media (max-width: 900px) {
+    .grid-etapes {
+        margin-top: 12px; /* rapproche la grille */
+    }
+
+    .section-title,
+    .hero h2 {
+        margin-bottom: 16px; /* moins d’espace sous "Étape vers le succès" */
+    }
+}
+
+@media (max-width: 900px) {
+    /* Réduction espace sous le titre */
+    .etapes h2 {
+        margin-bottom: 0px; /* au lieu de ~24px ou plus */
+    }
+
+    /* Réduction espace au-dessus de la grille */
+    .grid-etapes {
+        margin-top: 0;
+        gap: 20px; /* espace entre les icônes */
+    }
+}
+@media (max-width: 900px) {
+    .choix {
+        display: flex;
+        justify-content: center; /* centre les boutons */
+        gap: 12px;
+        margin-top: 16px;
+    }
+
+    .choix .btn {
+        margin: 0;
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 900px) {
+    .etapes h2 {
+        font-size: clamp(1.1rem, 4.5vw, 1.4rem); /* plus petit */
+        line-height: 1.2; /* réduit l’interligne */
+        white-space: nowrap; /* empêche le retour à la ligne */
+        text-align: center; /* centre le texte */
+    }
+}
+@media (max-width: 900px) {
+    .etapes h2 {
+        font-size: clamp(1.1rem, 4.5vw, 1.4rem);
+        line-height: 1.2;
+        white-space: nowrap; /* reste sur une seule ligne */
+        text-align: left; /* aligne à gauche */
+        margin-left: 8px; /* petit retrait pour l’alignement propre */
+    }
+}
+@media (max-width: 900px) {
+    .etapes h2 {
+        font-size: clamp(1.1rem, 4.5vw, 1.4rem);
+        line-height: 1.2;
+        white-space: nowrap;
+        text-align: left;
+        margin-left: 8px;
+        margin-bottom: 28px; /* augmente l’espace sous le titre */
+    }
+
+    .grid-etapes {
+        margin-top: 0; /* évite un double espace */
+    }
+}
+@media (max-width: 900px) {
+    .etape {
+        text-align: center;
+    }
+
+    .etape img,
+    .etape svg {
+        margin-bottom: 6px; /* réduit espace sous l’icône */
+    }
+
+    .etape h3 {
+        font-size: 0.9rem;
+        margin: 0; /* enlève marges superflues */
+        line-height: 1.3; /* resserre titre */
+    }
+
+    .grid-etapes {
+        gap: 16px; /* espace vertical entre les blocs (avant ~24px) */
+    }
+}
+a.btn {
+    text-decoration: none; /* enlève le soulignement */
+}
+a.btn,
+a.btn:focus,
+a.btn:active {
+    text-decoration: none;
+    outline: none; /* enlève le contour bleu par défaut */
+}
+/* === Responsive Netflix Page === */
+@media (max-width: 900px) {
+    /* Image hero en plein écran */
+    .tm-hero img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border: none; /* enlève le trait */
+    }
+
+    /* Liste de métadonnées (Durée, Problème, etc.) */
+    .tm-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px; /* réduit l’espace */
+        padding: 0 10px;
+        margin: 14px 0 0;
+        list-style: none;
+    }
+
+    .tm-meta li {
+        font-size: 0.8rem; /* texte plus petit */
+        padding: 6px 10px; /* moins de padding */
+        border-radius: 16px; /* arrondi plus compact */
+        background: #fff;
+        border: 1px solid #ddd;
+        white-space: nowrap;
+    }
+
+    .tm-meta li span {
+        color: #666;
+        margin-right: 4px;
+        font-weight: 500;
+    }
+
+    .tm-meta li b {
+        font-weight: 600;
+    }
+}
+
+/* === Netflix full width centered image === */
+@media (max-width: 900px) {
+    .tm-hero,
+    .tm-hero-media {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        border: none;
+    }
+
+    .tm-hero-media img {
+        width: 100%; /* prend toute la largeur dispo */
+        height: auto;
+        display: block;
+        margin: 0 auto; /* centre l’image */
+        object-fit: contain; /* évite qu’elle soit coupée */
+    }
+}
+@media (max-width: 900px) {
+    .tm-title {
+        margin-top: 20px; /* réduit l'espace (essaie 10px si tu veux encore plus serré) */
+        text-align: left; /* garde l’alignement propre si besoin */
+    }
+
+    .tm-title h1 {
+        margin-bottom: 8px; /* espace entre "Netflix" et "Refonte Netflix" */
+    }
+
+    .tm-title .choix {
+        margin-top: 12px; /* espace entre le texte et les boutons */
+    }
+}
+@media (max-width: 900px) {
+    .tm-hero {
+        margin-top: 10px; /* rapproche l’image du haut de la page */
+        margin-bottom: 10px; /* réduit l’espace avant le bloc suivant */
+    }
+
+    .tm-meta {
+        margin-top: 8px; /* rapproche les filtres de l’image */
+        margin-bottom: 16px; /* laisse un petit espace avant le titre Netflix */
+    }
+
+    .tm-title {
+        margin-top: 10px; /* réduit encore l’espace avant le titre Netflix */
+    }
+}
+@media (max-width: 900px) {
+    main.tm-case {
+        margin-top: 0; /* supprime l'espace global */
+        padding-top: 0;
+    }
+
+    .tm-hero {
+        margin-top: 10px; /* rapproche l’image du bouton Contact */
+    }
+
+    .tm-meta {
+        margin-top: 6px; /* colle les filtres à l’image */
+        margin-bottom: 14px;
+    }
+
+    .tm-title {
+        margin-top: 30px; /* rapproche le titre Netflix des filtres */
+    }
+}
+@media (max-width: 900px) {
+    .tm-title h1 {
+        margin-bottom: 16px; /* espace plus grand entre "Netflix" et le sous-titre */
+    }
+
+    .tm-title p.lead {
+        margin-bottom: 18px; /* espace entre le sous-titre et les boutons */
+    }
+
+    .tm-title .choix {
+        margin-top: 0; /* évite qu’ils collent trop */
+    }
+}
+@media (max-width: 900px) {
+    .tm-meta {
+        display: flex;
+        flex-wrap: wrap; /* passe sur plusieurs lignes si besoin */
+        gap: 8px; /* espace entre les filtres */
+        justify-content: flex-start; /* aligne à gauche */
+        padding-left: 0; /* supprime tout padding inutile */
+        margin-left: 0; /* colle bien avec le titre Netflix */
+    }
+
+    .tm-title {
+        margin-left: 0; /* garantit le même alignement */
+        padding-left: 0;
+    }
+}
+@media (max-width: 900px) {
+    .rail-track {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .rail-track::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #a36bff; /* violet */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .milestone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px 0;
+        text-align: center;
+    }
+
+    .milestone .iconbox {
+        margin-bottom: 8px;
+    }
+
+    .milestone .caption {
+        margin: 0;
+    }
+
+    .milestone h4 {
+        margin: 4px 0 0;
+        font-size: 1rem;
+    }
+
+    .milestone .days {
+        font-size: 0.9rem;
+        color: #666;
+    }
+}
+@media (max-width: 900px) {
+    .rail-track {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; /* espace entre les cartes */
+        justify-items: center;
+    }
+
+    .rail-track::before {
+        display: none; /* supprime la ligne verticale */
+    }
+
+    .milestone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .milestone .iconbox {
+        margin-bottom: 8px;
+    }
+
+    .milestone .caption {
+        margin: 0;
+    }
+
+    .milestone h4 {
+        margin: 4px 0 0;
+        font-size: 1rem;
+    }
+
+    .milestone .days {
+        font-size: 0.9rem;
+        color: #666;
+    }
+}
+@media (max-width: 900px) {
+    /* supprime la ligne verticale */
+    .rail-track::before,
+    .milestone .stem {
+        display: none !important;
+    }
+}
+@media (max-width: 900px) {
+    /* Grossir les icônes */
+    .milestone .iconbox {
+        width: 80px; /* taille plus grande */
+        height: 80px;
+        border-radius: 20px; /* arrondis conservés */
+    }
+
+    .milestone .iconbox img {
+        width: 40px; /* agrandir l’image */
+        height: 40px;
+    }
+
+    /* Espace vertical plus large */
+    .rail-track .milestone {
+        margin-bottom: 40px; /* augmente l’espace entre chaque bloc */
+    }
+}
+@media (max-width: 900px) {
+    /* Réduction de l’espace sous la timeline */
+    .tm-timeline {
+        margin-bottom: 20px; /* réduit l’espace avant Questionnaire */
+    }
+
+    /* Optionnel : réduit aussi l’espace interne entre icônes */
+    .rail-track .milestone {
+        margin-bottom: 30px; /* au lieu de 40px si tu veux compacter un peu */
+    }
+
+    /* Titre "Questionnaire exploratoire" rapproché */
+    .tm-research {
+        margin-top: 10px; /* rapproche le bloc suivant */
+    }
+}
+@media (max-width: 900px) {
+    main.tm-case {
+        margin-bottom: 0; /* enlève le vide en bas */
+        padding-bottom: 0; /* sécurise si c’était du padding */
+    }
+
+    .tm-research {
+        margin-top: 20px; /* espace contrôlé, plus serré */
+    }
+}
+/* Indicateurs du carrousel */
+.tmc-indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.tmc-indicators .dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    background: #ccc;
+    border-radius: 50%;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.tmc-indicators .dot.active {
+    background: #7d49c9; /* ton violet */
+}
+/* === Indicateurs Persona === */
+.persona-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.persona-indicators .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d3d3d3; /* gris clair par défaut */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.persona-indicators .dot.active {
+    background: #7b2ff7; /* violet accent */
+    transform: scale(1.2);
+}
+/* === User Journey en cartes (mobile) === */
+@media (max-width: 768px) {
+    .journey-table table,
+    .journey-table thead,
+    .journey-table tbody,
+    .journey-table th,
+    .journey-table td,
+    .journey-table tr {
+        display: block;
+        width: 100%;
+    }
+
+    /* On masque les en-têtes colonnes */
+    .journey-table thead {
+        display: none;
+    }
+
+    /* Chaque ligne devient une carte */
+    .journey-table tr {
+        margin-bottom: 1.5rem;
+        background: #fff;
+        border-radius: 12px;
+        padding: 1rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Première colonne (label : User goals, Activities, etc.) */
+    .journey-table td.row-label {
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        border: none;
+    }
+
+    /* Les autres cellules */
+    .journey-table td {
+        position: relative;
+        padding: 0.6rem 0 0.6rem 0.8rem;
+        border: none;
+    }
+
+    /* On ajoute le titre (Découverte, Exploration…) avant le texte */
+    .journey-table td[data-label]::before {
+        content: attr(data-label) " : ";
+        font-weight: 600;
+        color: #7d49c9; /* ton violet */
+        display: block;
+        margin-bottom: 0.3rem;
+        font-size: 0.9rem;
+    }
+
+    /* On réduit la courbe d'émotions sur mobile */
+    .journey-table .row-emotions .emotion-graph {
+        width: 100%;
+        height: 120px;
+    }
+}
+
+
+    /* le formulaire prend moins de place */
+    .form-container {
+        width: 90%; /* au lieu de 900px */
+        padding: 16px 14px; /* réduit le padding interne */
+        margin: 20px auto 40px; /* espace autour */
+    }
+
+    .form-container .form {
+        gap: 20px; /* réduit l’espace entre champs */
+    }
+
+    .form-container .form-group input,
+    .form-container .form-group textarea {
+        font-size: 0.9rem; /* texte un peu plus petit */
+        padding: 10px 12px; /* plus compact */
+    }
+
+    .form-container .form-submit-btn {
+        font-size: 0.85rem;
+        padding: 10px 20px;
+    }
+}
+/* === Inputs du formulaire (desktop) === */
+@media (min-width: 901px) {
+    .form-container .form-group input,
+    .form-container .form-group textarea {
+        padding: 14px 18px; /* ↑↓ = 14px, ←→ = 18px */
+        font-size: 1rem;
+    }
+}

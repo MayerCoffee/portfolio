@@ -3771,7 +3771,7 @@ a.btn:active {
         font-size: 0.85rem;
         padding: 10px 20px;
     }
-}
+
 /* === Inputs du formulaire (desktop) === */
 @media (min-width: 901px) {
     .form-container .form-group input,
